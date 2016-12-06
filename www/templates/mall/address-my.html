@@ -1,0 +1,48 @@
+<ion-view>
+	<ion-nav-title align="center">我的地址</ion-nav-title>
+	<ion-nav-buttons side="right">
+		<button class="button button-clear button-stable" 
+				ng-click="goAddAddress()"
+		>
+			添加
+		</button>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="left" class="button-clear button " >
+     		<!-- <img src="images/back.png" alt="" class="title-png-sub" go-back-my> -->
+     			<i class="icon iconfont font-color-cbcbcb  Rback-button" go-back-my>&#xe64b;</i>
+     	</ion-nav-buttons>
+	<ion-content class="content-bg "
+		overflow-scroll="false"
+	>
+		<div class="clearfix"></div>
+		<div class="list list-borderless margin-top  mb-0" 
+			ng-repeat="item in addressData" 
+			ng-click="getAddress(item)"
+			address-id="{{item.id}}"
+			>
+			<div class="item-divider item light-bg" >
+				<span>{{item.name}}</span>
+				<span class="energized ng-hide" ng-show="item.isDefault">[ 默认地址]</span>
+				<span class="pull-right">{{item.phone}}</span>
+			</div>
+			<div class="item-divider item light-bg font-color-898989">
+				{{item.address}}
+			</div>
+			<div class="item-divider item light-bg border-t text-right">
+				<button type="button" class="button icon-left ion-ios-compose-outline button-clear button-small button-stable" 
+				ng-click="goMendAddress(item);$event.stopPropagation();"
+				>
+					<span class="dark" >编辑</span>
+				</button>
+				<button type="button" class="button icon-left ion-ios-trash-outline button-clear button-small button-stable" 
+					ng-click="showConfirm(item.id,$index);$event.stopPropagation();">
+					<span class="dark">删除</span>
+				</button>
+			</div>
+		</div>
+		<div class="address-no" ng-show="showAddressNo">
+			<img src="images/address.png" alt="">
+			<p>你还没有添加收货地址哦</p>
+		</div>
+	</ion-content>
+</ion-view>

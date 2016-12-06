@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Address View Controller-->
+        <scene sceneID="GVi-EZ-lcj">
+            <objects>
+                <viewController storyboardIdentifier="MyAddressViewController" id="QbB-Hd-UEl" customClass="MyAddressViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m5J-fa-OBY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sax-5M-1du"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Paz-vo-N2p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2r-lA-Lbb">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="I2r-lA-Lbb" secondAttribute="trailing" id="K7i-ZO-Z8H"/>
+                            <constraint firstAttribute="bottom" secondItem="I2r-lA-Lbb" secondAttribute="bottom" id="aCQ-hS-ZAT"/>
+                            <constraint firstItem="I2r-lA-Lbb" firstAttribute="top" secondItem="Paz-vo-N2p" secondAttribute="top" id="qgg-36-JAY"/>
+                            <constraint firstItem="I2r-lA-Lbb" firstAttribute="leading" secondItem="Paz-vo-N2p" secondAttribute="leading" id="vtd-LN-T5F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="rootView" destination="I2r-lA-Lbb" id="ZKY-xz-zKP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J2A-9N-kig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240" y="-128"/>
+        </scene>
+    </scenes>
+</document>

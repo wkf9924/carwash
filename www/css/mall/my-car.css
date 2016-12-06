@@ -1,0 +1,107 @@
+.my-car+.my-car{
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+.my-car{
+  margin-bottom: 0px;
+}
+.my-car  .item-content{
+	position: relative;
+	margin-bottom: 0px;
+
+}
+.my-car .item-thumbnail-left {
+	padding: 10px 10px 10px 35px;
+}
+.my-car  .item-content>img{
+	border-radius:4px;
+	border: 1px #ddd solid;
+}
+.my-car  .item-content .text-line-2{
+	white-space:normal;
+	height: 40px;
+}
+.my-car  .item-content  {
+	padding-left: 95px;
+}
+.my-car  .item-content .button-bar-box{
+	float:right;
+	position:relative;
+	z-index:99;
+
+}
+.my-car  .item-content .button-bar-box .button-bar{
+	width: 80%;
+	
+}
+.my-car  .item-content .button-bar-box .button-bar .button{
+	padding:0px;
+	height:30px;
+}
+.my-car  .item-content .button-bar-box .button-bar .first{
+	border:solid 1px #f2f2f2;
+    background-color: #f2f2f2;
+    color:#fff;
+    font-size:16px;
+    vertical-align: middle;
+}
+.my-car  .item-content .good-num{
+  	margin-top: 15px;
+    font-size:14px;
+}
+.my-car  .item-content .good-num .buy-num{
+	line-height:35px;
+	color:#898989;
+	margin-right: 10px;
+}
+.my-car  .item-content .good-num .surplus-num {
+	line-height:35px;
+	color:#898989;
+}
+.my-car  .item-content .button-bar-box .button-bar .first i{
+	vertical-align:middle;
+}
+.my-car  .item-content .button-bar-box .button-bar .second{
+	 background-color: #fff;
+    font-size:16px;
+    border:solid 1px #f2f2f2;
+
+}
+.my-car  .item-content .button-bar-box .button-bar .third{
+	background-color: #ff9800;
+    color:#fff;
+    font-size:16px;
+    vertical-align: middle;
+
+} 
+.my-car  .item-content .button-bar-box .button-bar .third i{
+	vertical-align:middle;
+} 
+.my-car-footer>.col+.col{
+	text-align:center;
+	line-height: 44px;
+	font-size:16px;
+}
+.my-car-footer .item{
+	padding-top:11px;
+	padding-bottom: 11px;
+	margin-top:1px;
+	margin-bottom: 0px;
+
+}
+.my-car-footer>.col:last-child{
+	background-color:#ff5722;
+	color:#fff;
+}
+.noGoodList{
+    	text-align:center;
+    	padding-top:30px;
+}
+.my-car-no {
+  text-align:center;
+  padding-top:50px;
+}
+
+.surplus-num {
+	margin-right:2%;
+}

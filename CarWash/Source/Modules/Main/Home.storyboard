@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fdd-28-e8B">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="eoz-dy-XzV">
+            <objects>
+                <navigationController id="fdd-28-e8B" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="洗洋洋icon(常态)" selectedImage="洗洋洋icon(选中)" id="1RP-z2-k5H"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZOD-5W-mA5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8fR-eW-URy" kind="relationship" relationship="rootViewController" id="yc3-Qn-sgg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qNL-ah-U1S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-411.73333333333335" y="-1447.4533333333334"/>
+        </scene>
+        <!-- 洗洋洋-->
+        <scene sceneID="ZES-94-Zoz">
+            <objects>
+                <viewController id="8fR-eW-URy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="flp-1g-z9l"/>
+                        <viewControllerLayoutGuide type="bottom" id="RkT-zy-mnq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aqU-LB-X75">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title=" 洗洋洋" id="y0f-e0-Rbk"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GH6-MO-vY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3" y="-1448"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="洗洋洋icon(常态)" width="23" height="23"/>
+        <image name="洗洋洋icon(选中)" width="23" height="23"/>
+    </resources>
+</document>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Coupons View Controller-->
+        <scene sceneID="JHC-Kr-Hpz">
+            <objects>
+                <viewController storyboardIdentifier="MyCoupons" id="bDe-Yw-PUX" customClass="MyCouponsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rG5-zb-A9N"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zef-DM-ssL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lBY-O1-yXh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pih-iV-L21">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="暂无优惠券" translatesAutoresizingMaskIntoConstraints="NO" id="VNU-RF-G5m">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="VNU-RF-G5m" secondAttribute="height" id="IrU-gb-JEb"/>
+                                            <constraint firstAttribute="width" constant="169.5" id="xkd-Kv-Zie"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无优惠劵" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwS-VR-Vbt">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="SvP-HX-pxq"/>
+                                            <constraint firstAttribute="height" constant="18" id="nyM-Kr-T0m"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="VNU-RF-G5m" firstAttribute="top" secondItem="Pih-iV-L21" secondAttribute="top" id="8BF-JN-tBn"/>
+                                    <constraint firstItem="VNU-RF-G5m" firstAttribute="leading" secondItem="Pih-iV-L21" secondAttribute="leading" id="Eq4-kA-1EF"/>
+                                    <constraint firstItem="lwS-VR-Vbt" firstAttribute="centerX" secondItem="VNU-RF-G5m" secondAttribute="centerX" id="MTE-4f-o7g"/>
+                                    <constraint firstAttribute="trailing" secondItem="VNU-RF-G5m" secondAttribute="trailing" id="SWD-EQ-vaQ"/>
+                                    <constraint firstItem="lwS-VR-Vbt" firstAttribute="top" secondItem="VNU-RF-G5m" secondAttribute="bottom" constant="10" id="b8d-HE-SS6"/>
+                                    <constraint firstAttribute="width" constant="169.5" id="hQk-ZN-F8I"/>
+                                    <constraint firstAttribute="height" constant="197.5" id="ti8-K1-LPk"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MOT-wo-M3U">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="dKs-3v-6qe" userLabel="headerView">
+                                    <rect key="frame" x="0.0" y="0.0" width="365" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UoI-gd-2IV" userLabel="消费券view">
+                                            <subviews>
+                                                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knd-6K-hgZ" userLabel="消费券">
+                                                    <state key="normal" title="消费券" backgroundImage="券类型被选中底色">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="coupornsAction:" destination="bDe-Yw-PUX" eventType="touchUpInside" id="dW2-Ii-hWL"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="knd-6K-hgZ" firstAttribute="centerY" secondItem="UoI-gd-2IV" secondAttribute="centerY" id="KWL-QR-YyY"/>
+                                                <constraint firstItem="knd-6K-hgZ" firstAttribute="centerX" secondItem="UoI-gd-2IV" secondAttribute="centerX" id="gbW-4c-1he"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlz-qG-Mqc" userLabel="优惠劵view">
+                                            <subviews>
+                                                <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAf-XE-aF7" userLabel="优惠劵">
+                                                    <state key="normal" title="优惠券">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="coupornsAction:" destination="bDe-Yw-PUX" eventType="touchUpInside" id="Q8G-jS-Umr"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="LAf-XE-aF7" firstAttribute="centerX" secondItem="Tlz-qG-Mqc" secondAttribute="centerX" id="Dds-s4-tVb"/>
+                                                <constraint firstItem="LAf-XE-aF7" firstAttribute="centerY" secondItem="Tlz-qG-Mqc" secondAttribute="centerY" id="ngI-uR-CdL"/>
+                                            </constraints>
+                                        </view>
+                                        <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bb-CJ-q7I" userLabel="竖线view">
+                                            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="1" id="B1Y-QB-stJ"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="7bb-CJ-q7I" firstAttribute="top" secondItem="dKs-3v-6qe" secondAttribute="top" constant="5" id="3zE-of-fNl"/>
+                                        <constraint firstAttribute="trailing" secondItem="Tlz-qG-Mqc" secondAttribute="trailing" id="4VY-GF-Fta"/>
+                                        <constraint firstAttribute="bottom" secondItem="Tlz-qG-Mqc" secondAttribute="bottom" id="4aC-et-UUx"/>
+                                        <constraint firstItem="UoI-gd-2IV" firstAttribute="width" secondItem="dKs-3v-6qe" secondAttribute="width" multiplier="0.5" id="7j2-oU-aGE"/>
+                                        <constraint firstItem="Tlz-qG-Mqc" firstAttribute="height" secondItem="UoI-gd-2IV" secondAttribute="height" id="DYH-Qs-VMI"/>
+                                        <constraint firstAttribute="bottom" secondItem="7bb-CJ-q7I" secondAttribute="bottom" constant="5" id="Lbb-nK-8mK"/>
+                                        <constraint firstItem="UoI-gd-2IV" firstAttribute="leading" secondItem="dKs-3v-6qe" secondAttribute="leading" id="OdI-f0-rhu"/>
+                                        <constraint firstItem="Tlz-qG-Mqc" firstAttribute="width" secondItem="UoI-gd-2IV" secondAttribute="width" id="g99-6z-yd8"/>
+                                        <constraint firstItem="UoI-gd-2IV" firstAttribute="top" secondItem="dKs-3v-6qe" secondAttribute="top" id="pMV-i5-Vkr"/>
+                                        <constraint firstItem="7bb-CJ-q7I" firstAttribute="centerX" secondItem="dKs-3v-6qe" secondAttribute="centerX" id="pan-4r-TvG"/>
+                                        <constraint firstItem="Tlz-qG-Mqc" firstAttribute="top" secondItem="dKs-3v-6qe" secondAttribute="top" id="q2v-Hk-KJ6"/>
+                                        <constraint firstAttribute="bottom" secondItem="UoI-gd-2IV" secondAttribute="bottom" id="rf2-0z-UfC"/>
+                                        <constraint firstItem="Tlz-qG-Mqc" firstAttribute="leading" secondItem="UoI-gd-2IV" secondAttribute="trailing" id="uIc-an-dAV"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MOT-wo-M3U" firstAttribute="leading" secondItem="lBY-O1-yXh" secondAttribute="leading" constant="5" id="5yn-qc-U9m"/>
+                            <constraint firstItem="Zef-DM-ssL" firstAttribute="top" secondItem="MOT-wo-M3U" secondAttribute="bottom" id="T3U-2X-OQL"/>
+                            <constraint firstItem="Pih-iV-L21" firstAttribute="centerX" secondItem="lBY-O1-yXh" secondAttribute="centerX" id="Tow-db-WSQ"/>
+                            <constraint firstAttribute="trailing" secondItem="MOT-wo-M3U" secondAttribute="trailing" constant="5" id="U7n-LZ-qQ5"/>
+                            <constraint firstItem="Pih-iV-L21" firstAttribute="centerY" secondItem="lBY-O1-yXh" secondAttribute="centerY" id="i0o-EA-EHr"/>
+                            <constraint firstItem="MOT-wo-M3U" firstAttribute="top" secondItem="lBY-O1-yXh" secondAttribute="top" constant="69" id="lOz-eE-vHd"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="consumeBtn" destination="knd-6K-hgZ" id="iXF-46-Ld5"/>
+                        <outlet property="discountBtn" destination="LAf-XE-aF7" id="4i0-0u-V74"/>
+                        <outlet property="emptyStatusLabel" destination="lwS-VR-Vbt" id="yFL-Sf-P4P"/>
+                        <outlet property="emptyStatusView" destination="Pih-iV-L21" id="b73-ES-Xs3"/>
+                        <outlet property="headerView" destination="dKs-3v-6qe" id="gE6-qx-yTW"/>
+                        <outlet property="myTableView" destination="MOT-wo-M3U" id="YVo-Sq-NnC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51U-Rj-FDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-178"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="券类型被选中底色" width="70" height="23"/>
+        <image name="暂无优惠券" width="169" height="169"/>
+    </resources>
+</document>

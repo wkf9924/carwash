@@ -1,0 +1,84 @@
+<ion-view class="">
+<ion-nav-title>发表评论</ion-nav-title>
+	<ion-content class="content-bg pt-10 has-footer">
+		
+		
+		<div class="list order mt-10"
+				ng-repeat="commentItem in commentList">
+			<div class="item no-border item-thumnail-left" ng-repeat="detail in sendParas.order_details">
+				<div class="thumnail-img-box">
+					<img class="thumnail-img" 
+							ng-src="{{detail.img_url | toImgUrl}}" 
+							error-src="images/defaultImg.png"
+							>
+					<div class="font-color-ab text-center pt-10 pb-10">
+						相符程度
+					</div>
+				</div>
+				
+				<div class="thumnail-comment">
+					<textarea name=""
+										placeholder="写下你对物品的评价" 
+										ng-model="detail.eva_content">
+						
+					</textarea>
+					<ul class="comment-stars text-right clearfix"
+							score-star
+							bold-start="ion-ios-star"
+							outline-star="ion-ios-star-outline"
+							degree-evaluate="detail.pro_evaluate"
+							>
+						<li class="ion-ios-star-outline"></li>
+						<li class="ion-ios-star-outline"></li>
+						<li class="ion-ios-star-outline"></li>
+						<li class="ion-ios-star-outline"></li>
+						<li class="ion-ios-star-outline"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="list order mt-0">
+			<div class="item no-border bgc-f2 pt-10 pb-10 list-borderless font-color-ab">商品评分</div>
+			<div class="pl-20 pr-10 bgc-f">
+				<div class="item border-b item-borderless ml--12">
+					<span class="font-color-ab">物流服务</span>
+					<ul class="comment-stars pull-right no-padding p-0 mr--10"
+							score-star
+							bold-start="ion-ios-star"
+							outline-star="ion-ios-star-outline"
+							degree-evaluate="sendParas.log_service"
+					>
+						<li class="ion-ios-star-outline"></li>
+						<li class="ion-ios-star-outline"></li>
+						<li class="ion-ios-star-outline"></li>
+						<li class="ion-ios-star-outline"></li>
+						<li class="ion-ios-star-outline"></li>
+					</ul>
+				</div>
+				<div class="item border-t ml--12">
+					<span class="font-color-ab">服务态度</span>
+					<ul class="comment-stars pull-right clearfix p-0 mr--10"
+							score-star
+							bold-start="ion-ios-star"
+							outline-star="ion-ios-star-outline"
+							degree-evaluate="sendParas.que_service"
+					>
+						<li class="ion-ios-star-outline"></li>
+						<li class="ion-ios-star-outline"></li>
+						<li class="ion-ios-star-outline"></li>
+						<li class="ion-ios-star-outline"></li>
+						<li class="ion-ios-star-outline"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+ </div>
+	</ion-content>
+	<div class="bar bar-footer comment">
+		<!-- <button class="button button-assertive" ng-click="refresh()">刷新</button> -->
+     		<button class="button button-assertive pull-right button-large"
+     						ng-click="goParas()"
+     		>发表评论</button>
+   	</div>
+	
+</ion-view>

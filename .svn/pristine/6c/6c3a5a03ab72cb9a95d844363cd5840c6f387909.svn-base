@@ -1,0 +1,96 @@
+<ion-view>
+    <ion-nav-title>订单详情</ion-nav-title>
+    <ion-content class="content-bg"
+        	overflow-scroll="false"
+    >
+
+        <div class="soreder-dfk-item">
+            <!-- 待付款 -->
+            <!--<div class="bgc-orange soreder-dfk" ng-show="status=='0'">-->
+                <!--<p class="deal-text pull-left">待付款</p>-->
+                <!--<img class="pay-img pull-right" src="images/order/fw-unpay_icon.png" alt="">-->
+                <!--<div class="clearfix"></div>-->
+            <!--</div>-->
+            <!--已付款-->
+            <div class="bgc-orange soreder-dfk" ng-show="status=='1'">
+                <p class="deal-text pull-left">已付款</p>
+                <img class="pay-img pull-right" src="images/order/fw-pay-icon.png" alt="">
+                <div class="clearfix"></div>
+            </div>
+            <!--已取消-->
+            <div class="bgc-orange soreder-dfk" ng-show="status=='2'">
+                <p class="deal-text pull-left">已取消</p>
+                <img class="pay-img pull-right" src="images/order/fw-closed-icon.png" alt="">
+                <div class="clearfix"></div>
+            </div>
+            <!--已使用-->
+            <div class="bgc-orange soreder-dfk" ng-show="status=='3'">
+                <p class="deal-text pull-left">已使用</p>
+                <img class="pay-img pull-right" src="images/order/fw-successed-payed-icon.png" alt="">
+                <div class="clearfix"></div>
+            </div>
+            <div class="soreder-contact-item">
+                <div class="soreder-contact-left pull-left contz-ge">{{seller_name}}</div>
+                <div class="soreder-contact-right pull-right cont-tel"><a href="tel:{{seller_tel}}">{{seller_tel}}</a></div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="soreder-contact-item soreder-info-item">
+                <div class="soreder-title">服务</div>
+                <div class="soreder-info-list clearfix">
+                    <img ng-src="images/{{orderPic(service_type)}}"  onerror= "javascript:this.src='images/imgerror.png' " alt="" class="">
+                    <span class="pull-left margin-left contz-ge">{{service_name}}</span>
+                    <span class="pull-right cont-price">¥{{service_price}}</span>
+                </div>
+                <div class="soreder-couponinfo clearfix"><span class="pull-left">优惠卷</span><span class="pull-right">-¥{{coupon_price}}</span></div>
+                <div class="soreder-priceinfo"><span class="pull-left">实付</span><span class="pull-right good-price">¥{{service_price-coupon_price}}</span></div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="soreder-contact-item soreder-info-item light-dark">
+                <div class="soreder-contact-list strong-dark clearfix">
+                    <span class="pull-left">订单编号</span>
+                    <span class="pull-right contl-ge">{{id}}</span>
+                </div>
+                <div class="soreder-contact-list clearfix ">
+                    <span class="pull-left">下单时间</span>
+                    <span class="pull-right contyl-ge">{{create_time}}</span>
+                </div>
+            </div>
+        </div>
+
+
+    </ion-content>
+    <!-- 待付款 -->
+    <!--<div class="bar bar-footer soreder-btn-item" ng-show="status=='0'">-->
+        <!--<div class="col col-25 col-offset-50">-->
+            <!--<button class="button button-small button-outline button-stable button-block"  ng-click="cancelServiceOrder()">取消订单</button>-->
+        <!--</div>-->
+        <!--<div class="col col-25 ">-->
+            <!--<button class="button button-small button-outline button-energized button-block" ng-click="servicePay()">立刻支付</button>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--已付款-->
+    <div class="bar bar-footer soreder-btn-item" ng-show="status=='1'">
+        <div class="col col-75">
+        </div>
+        <div class="col col-25">
+            <button class="button button-small button-outline button-energized button-block" ng-click="useservice()">使用服务</button>
+        </div>
+    </div>
+    <!--已取消-->
+    <div class="bar bar-footer soreder-btn-item" ng-show="status=='2'">
+        <div class="col col-75">
+        </div>
+        <div class="col col-25">
+            <button class="button button-small button-outline button-stable button-block" ng-click="delServiceOrder(1)">删除订单</button>
+        </div>
+    </div>
+    <!--已使用-->
+    <div class="bar bar-footer soreder-btn-item" ng-show="status=='3'">
+        <div class="col col-75">
+        </div>
+        <div class="col col-25">
+            <button class="button button-small button-outline button-stable button-block " ng-click="delServiceOrder(1)">删除订单</button>
+        </div>
+    </div>
+
+</ion-view>

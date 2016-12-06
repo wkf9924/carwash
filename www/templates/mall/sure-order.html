@@ -1,0 +1,75 @@
+<ion-view>
+    <ion-nav-title>确认订单</ion-nav-title>
+    <ion-content class="content-bg has-footer "
+        	overflow-scroll="false"
+    >
+	<div class="list list-borderless sure-order padding-top">
+		<div class="item item-icon-left item-icon-right add-address" ng-click="goMyAdress()">
+			<i class="icon ion-ios-location-outline font-color-cbcbcb" ></i>
+			<div class="address  light-bg ng-show" ng-show="defaultAdress">
+				<span>收货人：</span>
+				<span>{{defaultAdress.name}}</span>
+      			<span class="pull-right font-color-898989">{{defaultAdress.phone}}</span>
+			</div>
+			<div class="address  light-bg font-color-898989 ng-show" ng-show="defaultAdress">
+				{{defaultAdress.address}}<!-- {{defaultAdress.address}} -->
+			</div>
+			<div class="address item-divider light-bg ng-hide" ng-hide="defaultAdress">
+				<h3 class="font-18 font-color-89898">请添加配送地址</h3>
+			</div>
+			<i class="icon ion-ios-arrow-right font-color-cbcbcb" ></i>
+              	
+		</div>
+	</div>
+	<div class="list list-borderless sure-order padding-top">
+      	<div class="item">
+      		商品列表
+      	</div>
+		<div class="item item-thumbnail-left pb-8 bg-fa goodItem" ng-repeat="item in goodsData">
+			<!-- 此图片为默认图片 -->
+			<img 
+        	ng-src="{{item.img_url | toImgUrl}}"
+        	error-src="images/defaultImg.png"
+        	>
+			<!--  src="images/good.png"  -->
+			<div  class="text-line-2 whhite-normal">
+				{{item.name}}
+			</div>
+			<div class="font-color-ff5722">
+				￥<span>{{item.price}}</span>
+			</div>
+			<div class="font-color-ab">
+				x <span>{{item.buy_count||item.buyedCount}}</span>
+			</div>
+		</div>
+		<div class="item item-divider bgc-f no-border  ">
+                <div class="clearfix mb-8 pb-8 border-b">
+                    <span>运费</span>
+                    <span class="pull-right">免邮</span>
+                </div>
+                <ul class="buy-info clearfix ">
+                    <li class="pull-right font-color-ff5722">￥<span>{{totalPrice()}}</span></li>
+                    <li class="pull-right">合计:{{}}</li>
+                    <li class="pull-right mr-10 font-color-ab">共<span>{{totalCount()}}</span>件商品</li>
+                </ul>
+            </div>
+	</div>
+	<!-- <div class="list list-borderless sure-order">
+		<div class="item item-icon-right ">
+			<span>是否需要发票</span>
+			<i class="icon ion-chevron-right font-color-ab font-22"></i>
+		</div>
+	</div> -->
+
+	
+     
+     
+    </ion-content>
+    <div class="bar bar-footer no-padding sure-order-footer">
+		
+		<div class="col no-padding col-67">
+			<span class="dark">应付金额</span> <span>￥{{totalPrice()}}</span>
+		</div>
+		<div class="col text-line-1 no-padding col-33" ng-click="creatOrder()">立即付款</div>
+    </div>
+</ion-view>

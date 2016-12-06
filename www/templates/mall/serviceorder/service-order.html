@@ -1,0 +1,19 @@
+<ion-view>
+    <ion-nav-buttons side="left" class="button-clear button " >
+     		<!-- <img src="images/back.png" alt="" class="title-png-sub" go-back-my> -->
+            	<i class="icon iconfont font-color-cbcbcb  Rback-button" go-back-my>&#xe64b;</i>
+     	</ion-nav-buttons>
+    <ion-nav-title >
+        <div class="buttons pull-left">
+            <div class="btnretrun"></div>
+        </div>
+        <div class="orderbtn">
+            <button class="button button-energizedv active" id="btnswitchservice" ng-click="btnswitchservice()">服务</button>
+            <button class="button button-light"  id="btnswitchgoods" ng-click="btnswitchgoods()">商品</button>
+        </div>
+    </ion-nav-title>
+
+    <div ng-include="currentTabOne"></div>
+    <div ng-include="currentTabTwo" ng-controller="myOrderCtrl"></div>
+
+</ion-view>

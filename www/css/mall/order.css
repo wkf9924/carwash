@@ -1,0 +1,236 @@
+.list.order{
+    margin:0px;
+}
+.list.order+.list.order{
+    margin-top:10px;
+}
+.list.order .item{
+    font-size:16px !important;
+    white-space: normal; !important;
+}
+.good-item{
+    padding-top:10px; /* 我的订单修改 原来25  time20160921*/
+    padding-bottom: 10px;
+    background-color:#fafafa;
+}
+.good-item >img:first-child{
+    /* top:25px; 我的订单修改 time 20160921*/
+    /* left: 15px;  我的订单修改 time 20160921*/
+}
+.list.order .item p{
+    font-size:16px;
+}
+.list.order .pay-condition {
+    position: relative;
+    background-color:#ff9800;
+    padding-top:30px;
+    padding-bottom:30px;
+
+}
+.list.order .pay-img{
+    position:absolute;
+    top:50%;
+    right:50px;
+    transform:translateY(-50%);
+    width:80px;
+    
+}
+
+.list.order .pay-condition p{
+    color: #fff !important;
+}
+.list.order  .good-img{
+    border-radius: 4px;
+    border:solid 1px #ddd;
+}
+.list.order  .good-price{
+    color:#ff5722;
+    //font-size:20px;
+    
+}
+.list.order  .good-num{
+    //font-size:20px;
+    //color:#ababab;
+    
+}
+.list.order   .buy-info{
+    border-top:1px solid #eee;
+    padding-top:10px;
+    padding-bottom:2px;
+}
+.list.order   .buy-info >li {
+ float:right;
+}
+.list.order   .buy-info .first{
+    color: #ff5722;
+}
+.list.order   .buy-info .third{
+    color: #ababab;
+    font-size:14px;
+    margin-right:10px;
+}
+.list.order .transport{
+    padding-bottom:10px;
+    padding-top:2px;
+}
+.list.order .good-list {
+    background:#fff;
+    position:relative;
+    z-index: 2;
+}
+.list.order .good-list >.item+.item {
+    margin-top:10px;
+}
+
+.list.order .buy-result{
+
+}
+.list.order.buy-result>.item{
+  border:0px;
+
+}
+.list.order.buy-result>.item +.item{
+    border-top:1px solid #ddd;
+}
+.order.button-menus{
+    background-color:#fff;
+    margin-bottom:10px;
+}
+.order.button-menus .col>div{
+    height:32px;
+    line-height:32px;
+   font-size:16px;
+    text-align:center;
+}
+.order.button-menus .col>div.active{
+    background-color:#FFF6EF;
+    color:#ff5722;
+    border-radius: 20px;
+}
+.bar-footer.operate-buttons  .button{
+   margin:0px !important;
+}
+.operate-buttons .col{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.operate-buttons{
+   
+}
+.operate-buttons .button{
+    padding-left:8px;
+    padding-right: 8px;
+}
+
+
+.bar-footer.order>.button:first-child{
+
+}
+
+.list.order .thumnail-img-box{
+  width:80px;
+  float:left;
+  margin-right:10px;
+}
+.list.order .thumnail-img{
+    border-radius:4px;
+    border:solid 1px #ddd;
+    width:100%;
+    height: 80px;
+    
+   
+}
+.list.order .thumnail-comment{
+    
+    overflow: auto;
+}
+.list.order .thumnail-comment textarea{
+    width:100%;
+    height:80px;
+    border-radius:4px;
+    border:solid 1px #ddd;
+    resize:none;
+    padding:5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+.list.order .comment-stars{
+    color:#ff5722;
+    padding:10px 0px;
+}
+.list.order .comment-stars>li{
+    display:inline-block;
+    
+} 
+.list.order .comment-stars>li+ li>{
+	margin-left: 5px;
+}
+.bar-footer.comment .button{
+    border-radius:0px ;
+    margin-top:-5px;
+    margin-bottom: -5px;
+    margin-right: -5px;
+    font-size:16px;
+    padding-left:20px;
+    padding-right:20px;
+}
+.item.deal-successed{
+  overflow:visible !important;
+  z-index: 10;
+
+}
+.item.deal-successed img{
+    position:absolute;
+    top:0px;
+    right: 20px;
+    width: 60px;
+}
+ion-tabs.my-order{
+
+}
+ion-tabs.my-order .tab-item{
+    	/*border:1px #28a54c solid;*/
+    	background:#fff;
+}
+
+ion-tabs.my-order .tab-item.tab-item-active{
+    border:0 !important ;
+    /*display:block;
+    padding-top:9px !important;*/
+}
+ion-tabs.my-order .tab-item.activated{
+    border:0 !important ;
+}
+ion-tabs.my-order .tab-item.tab-item-active .tab-title{
+    /*display: inline-block;
+    background-color:#FFF6EF;
+    line-height:30px;
+    color:#FE7E00;
+    border-radius:20px;
+    padding-left:10px;
+    padding-right:10px;*/
+
+    background-color:#FFF6EF;
+    color:#FE7E00;
+    border-radius:20px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom: 5px;
+    padding-top: 5px; 
+}
+.operate-buttons .button.button-energized.button-outline{
+    border-color: #ff9800 !important;
+    color:#ff9800 !important;
+
+}
+ .operate-buttons .button.button-energized.button-outline.activated{
+    background-color:#ff9800 !important;
+    color:#fff !important;
+}
+
+
+
+
+
+

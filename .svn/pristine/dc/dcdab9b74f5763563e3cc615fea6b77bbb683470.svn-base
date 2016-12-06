@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en" >
+
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width,height=device-height">
+	<link rel="stylesheet" type="text/css" href="lib/ionic/css/ionic.min.css">
+	<link rel="stylesheet" type="text/css" href="css/xyy-icon/iconfont.css">
+	<script src="lib/ionic/js/ionic.bundle.js"></script>
+	<script src="js/tabSlideBox.js"></script>
+	<script data-main="js/main-development.js" src="js/require.js"> </script>
+	<script src="plugin-function.js"></script>
+	<script src="cordova.js"></script>
+	<script src="js/CITY-JSON.js"></script>
+	<script src="js/linkAddress.js"></script>
+</head>
+<body ng-controller="StarterCtrl">
+<ion-nav-bar class="bar-light" align-title="center">
+	<ion-nav-back-button ng-click="goBack()" class="button-clear button hide">
+		<i class="icon iconfont font-color-cbcbcb Rback-button">&#xe64b;</i>
+		{{""}}
+	</ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-nav-view>
+	<share-directive>
+
+	</share-directive>
+</ion-nav-view>
+
+</body>
+
+</html>

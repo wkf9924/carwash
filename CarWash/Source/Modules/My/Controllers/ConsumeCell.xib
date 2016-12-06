@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConsumeCell" id="KGk-i7-Jjw" customClass="ConsumeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="57"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JV0-Sz-2n6" userLabel="背景ImageView">
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="洗车券icon" translatesAutoresizingMaskIntoConstraints="NO" id="LHb-F8-ggJ">
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="BmG-te-TZF"/>
+                            <constraint firstAttribute="width" constant="38" id="bGN-bx-5KH"/>
+                            <constraint firstAttribute="height" constant="38" id="bqR-c6-u7z"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="cUp-be-Nnr"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="洗车券" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4it-a3-ueH">
+                        <frame key="frameInset" minX="59" minY="16" width="39" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="IHx-lj-6hg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="可在指定商家免费洗车一次" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJI-kY-966">
+                        <frame key="frameInset" minX="59" minY="33" width="156" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="oOP-AG-xTw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="JV0-Sz-2n6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="0fm-Wh-z96"/>
+                    <constraint firstAttribute="trailing" secondItem="JV0-Sz-2n6" secondAttribute="trailing" id="D9m-JP-FzP"/>
+                    <constraint firstItem="JV0-Sz-2n6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DaX-eb-qif"/>
+                    <constraint firstItem="pJI-kY-966" firstAttribute="leading" secondItem="4it-a3-ueH" secondAttribute="leading" id="HOE-qq-JwF"/>
+                    <constraint firstItem="LHb-F8-ggJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="PFe-hs-q2U"/>
+                    <constraint firstItem="LHb-F8-ggJ" firstAttribute="centerY" secondItem="JV0-Sz-2n6" secondAttribute="centerY" id="TOD-lz-iq0"/>
+                    <constraint firstItem="4it-a3-ueH" firstAttribute="leading" secondItem="LHb-F8-ggJ" secondAttribute="trailing" constant="5" id="fRa-j3-qsC"/>
+                    <constraint firstItem="pJI-kY-966" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="y8o-YO-kSQ"/>
+                    <constraint firstItem="4it-a3-ueH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="z66-eY-TFM"/>
+                    <constraint firstAttribute="bottom" secondItem="JV0-Sz-2n6" secondAttribute="bottom" id="za9-IB-Bgv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cosumeImage" destination="LHb-F8-ggJ" id="aca-Er-6DE"/>
+                <outlet property="washContentLabel" destination="pJI-kY-966" id="j5s-OB-R2y"/>
+                <outlet property="washLabel" destination="4it-a3-ueH" id="wgE-bg-PvJ"/>
+            </connections>
+            <point key="canvasLocation" x="-130" y="-57"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="洗车券icon" width="38" height="38"/>
+    </resources>
+</document>

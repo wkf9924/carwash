@@ -1,0 +1,153 @@
+
+<ion-view >
+    <ion-nav-title>商品详情</ion-nav-title>
+     <ion-nav-buttons side="right">
+              <button class="button button-clear" 
+              			ng-click="goToCar()"
+              			>
+				<i class="icon iconfont font-color-cbcbcb  Rback-button">&#xe611;</i>
+                		<span class="badage"></span>
+              </button>
+     </ion-nav-buttons>
+     <!-- <ion-nav-buttons side="left" class="button-clear button " >
+     			<img src="images/back.png" alt="" class="icon-goback" go-back-my>
+     		</ion-nav-buttons> -->
+     		<ion-nav-buttons side="left" class="button-clear button "  >
+     			<i class="icon iconfont font-color-cbcbcb  Rback-button" go-back-my>&#xe64b;</i>
+     		</ion-nav-buttons>
+
+    <ion-content class="content-bg has-footer"
+		overflow-scroll="false"
+    >
+    		<ion-slide-box  ng-click="nextSlide()" 
+    			slide-interval="4000" 
+    			does-continue="true"
+    			>
+			<ion-slide  ng-repeat="url in urls">
+	        		<div class="item item-image no-border">
+					<img  ng-src="{{url}}"
+							error-src="images/defaultImg.png"
+					 >
+	        		</div>
+			</ion-slide>
+      	</ion-slide-box>
+        <div class="item detail item-text-wrap padding-bottom">
+            <p class="text-line-1 goods-name">
+            	{{goodsInfo.name}}
+            </p>
+            <p class="clearfix">
+                <span class="price-detail"><i class="font-12">￥</i>{{goodsInfo.price}}</span>
+                <span class="original-price">￥{{goodsInfo.original_price}}</span>
+                <span class="buy-nums-detail  pull-right">{{goodsInfo.selled_count}}人已购</span>
+            </p>
+
+        </div>
+        <div class="item detail receipt">
+            <span class="" ng-repeat="service in goodsInfo.expand_service">
+                <i class="ion-ios-checkmark-outline"></i>
+                {{(service==0) ? "正规发票" : "包邮"}}
+            </span>
+            <!-- <span class="">
+                <i class="ion-ios-checkmark-outline"></i>
+                包邮
+            </span> -->
+        </div>
+        <div class="item detail clearfix buyed-nums" >
+            <div class="child1">购买数量</div>
+            <div class="child3">
+                <div class="button-bar"
+                		operate-count
+                		stock-count="stock_count" 
+                		buyed-count="buyedCount"
+                		 >
+                    <a class="button button-small first" ng-click="minus_count()">
+                        <i class="ion-minus-round"></i>
+                    </a>
+                    <a class="button button-small second">{{goodsInfo.buyedCount}}</a>
+                    <a class="button button-small third" ng-click="plus_count()">
+                        <i class=" ion-plus-round"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="child2">
+                剩余<span>{{goodsInfo.stock_count}}</span>件
+            </div>
+
+        </div>
+        
+        <div class="item detail" ui-sref="product-paras" ng-click="get(goodsInfo.productParams)">
+            产品参数
+            <i class=" ion-ios-arrow-right ion-arrow-right "></i>
+         </div>
+        <div class="item detail" ui-sref="picture-detail" ng-click="get(goodsInfo.productDetails)">
+            图文详情
+        	<i class=" ion-ios-arrow-right ion-arrow-right "></i>
+        </div>
+        <div class="item detail value">
+            <h3 class="item-heading clearfix">
+                用户评价
+                <span class="font-color-ab"> ( <span>{{goodsInfo.comment_count}} </span>) </span>
+               	<i class=" ion-ios-arrow-right ion-arrow-right "></i>
+                <div class="record">
+                    <!--<span>{{goodsInfo.score||5.0}}</span>--><span>5.0</span>分
+                </div>
+                
+
+                <ul class="value-star" score="{{goodsInfo.score}}">
+                    <!--<li ng-repeat="item in scoreArr">-->
+                    	<!--<i class="{{makeScope($index)}}"></i>-->
+                    <!--</li>-->
+                    <li><i class="ion-ios-star"></i></li>
+                    <li><i class="ion-ios-star"></i></li>
+                    <li><i class="ion-ios-star"></i></li>
+                    <li><i class="ion-ios-star"></i></li>
+                    <li><i class="ion-ios-star"></i></li>
+                    <!--<li><i class="ion-ios-star-outline"></i></li>-->
+                    <!--<li><i class="ion-ios-star-half"></i></li>-->
+                </ul>
+
+            </h3>
+            <ul class="item-content">
+                <!-- begin 用户评分-->
+                <li class="" ng-repeat="comment in goodsInfo.comments">
+                    <div class="item-content-heading">
+                        <div href="" class="icon-img">
+                            <img src="" ng-src="{{comment.avatar_url}}">
+                        </div>
+                        <div class="phone-date clearfix">
+                            <div class="phone">
+                                {{comment.phone}}
+                            </div>
+                            <div class="date">
+                                <span>{{comment.create_at}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-content-text">
+                        <p class="item-content-value">{{comment.content}}</p>
+                        <div class="item-content-answer" ng-if="">
+                            {{"客服留言（数据里面没有）"}}
+                        </div>
+                    </div>
+                </li>
+                <!-- end 用户评分-->
+            </ul>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer no-padding detail">
+        <div class="button-bar">
+            <button class="button" 
+            	addto-cart
+            	sendedCount="buyedCount"
+            	ng-click="goCart(goodsInfo.id,goodsInfo.mechant_id,goodsInfo.sku_stock_id,goodsInfo.buyedCount)"
+            	>
+            	加入购物车
+            </button>
+            <button class="button" 
+            	ng-click="getList(goodsInfo)"
+            	>
+            	立即购买
+            </button>
+        </div>
+    </div>
+</ion-view>

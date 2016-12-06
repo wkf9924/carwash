@@ -1,0 +1,20 @@
+/*
+node tools/r.js -o cssIn=tools/styles.css out=css/all.css optimizeCss=standard
+*/
+
+@import "../css/common.css";
+@import "../css/detail.css";
+@import "../css/mall.css";
+
+@import "../css/mall/detail.css";
+@import "../css/mall/mall.css";
+@import "../css/mall/mall-common.css";
+@import "../css/mall/my-car.css";
+@import "../css/mall/order.css";
+@import "../css/mall/sure-order.css";
+
+
+@import "../css/discovery/discovery.css";
+@import "../css/discovery/discovery-detail.css";
+
+

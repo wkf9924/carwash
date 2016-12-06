@@ -1,0 +1,23 @@
+<ion-view>
+	<ion-nav-title>选择区/县</ion-nav-title>
+	<ion-content class="content-bg"
+      		overflow-scroll="false">
+		<div class="list" select-district>
+        		
+  			<div class="item item-button-right" 
+  			
+  			ng-repeat="district in districtArr"
+  			district-repeat-finished
+          		ng-click="goAdd()"
+  			>
+    				<span class="district">{{district.item_name}}</span>
+    				<button class="button button-clear button-stable">
+      				<i class="icon ion-ios-arrow-right"></i>
+    				</button>
+  			</div>
+		</div>
+		
+	
+		
+	</ion-content>
+</ion-view>

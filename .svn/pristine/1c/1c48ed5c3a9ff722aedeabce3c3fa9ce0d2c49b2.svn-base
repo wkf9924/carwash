@@ -1,0 +1,172 @@
+<ion-view>
+    <ion-nav-title>订单详情</ion-nav-title>
+    <ion-content class="content-bg has-footer">
+        <div class="order list">
+		<!--begin 交易成功 5未评价 -->
+           <div class="item deal-condition no-border pay-condition ng-hide" 
+           		ng-show="orderInfo.order_status==='5'">
+                <p class="deal-text">交易成功</p>
+                <img class="pay-img pull-right" src="images/order/payed-icon.png" alt="">
+			   <div class="clearfix"></div>
+            </div>
+		<!-- end交易成功 -->
+		<!-- begin 卖家已发货 4-->
+           <div class="item deal-condition no-border pay-condition ng-hide"
+           		ng-show="orderInfo.order_status==='4'">
+                <p class="deal-text">卖家已发货</p>
+                <img class="pay-img" src="images/order/payed-send-icon.png" alt="">
+           </div>
+		<!-- end 卖家已发货 -->
+		<!-- begin 待付款 0-->
+		<div class="item deal-condition no-border pay-condition ng-hide"
+			ng-show="orderInfo.order_status==='0'">
+                	<p class="deal-text">待付款</p>
+                	<img class="pay-img pull-right" src="images/order/unpay-icon.png" alt="">
+			<div class="clearfix"></div>
+            </div>
+		<!-- end 待付款 0-->
+		<!-- begin 交易关闭 7-->
+		<div class="item deal-condition no-border pay-condition ng-hide"
+			ng-show="orderInfo.order_status==='7'">
+               	<p class="deal-text">已关闭</p>
+                	<img class="pay-img" src="images/order/closed-icon.png" alt="">
+            </div>
+		<!-- end 交易关闭 -->
+		<!-- begin 买家已付款 1-->
+		<div class="item deal-condition no-border pay-condition ng-hide"
+			ng-show="orderInfo.order_status==='1'">
+                <p class="deal-text">买家已付款</p>
+                <img class="pay-img" src="images/order/successed-payed-icon.png" alt="">
+            </div>
+		<!-- begin 买家已付款 1-->
+            <div class="item item-icon-left  buyer-info whhite-normal no-border ">
+                <i class="icon ion-ios-location-outline font-color-ab"></i>
+                <div class="line-height-30">
+                    <span>收货人:</span>
+                    <span>{{orderInfo.receiver_name}}</span>
+                    <span class="pull-right">{{orderInfo.receiver_phone}}</span>
+                </div>
+                <div class="line-height-30">
+                   	{{orderInfo.receiver_address}}
+                </div>
+            </div>
+        </div>
+        <div class="list order ">
+            <div class="item item-divider bgc-f no-border">
+                商品列表
+            </div>
+            <div class="good-list">
+                	<div class="item item-text-wrap item-thumbnail-left bgc-f2 no-border "
+                		ng-repeat=" order_detail in orderInfo.order_details">
+                    	<img 
+                            ng-src="{{order_detail.img_url | toImgUrl}}"
+                            error-src="images/defaultImg.png"
+                            >
+                    	<div class="text-line-2">
+                        	{{order_detail.name}}
+                    	</div>
+                    	<div class="good-price">
+                        	￥<span>{{order_detail.price}}</span>
+                    	</div>
+                    	<div class="good-num">
+                        	X <span>{{order_detail.number}}</span>
+                    	</div>
+                	</div>
+            </div>
+
+            <div class="item item-divider bgc-f no-border  " >
+                <div class="clearfix transport">
+                    <span>运费</span>
+                    <span class="pull-right">{{orderInfo.freight}}</span>
+                </div>
+                <ul class="buy-info clearfix">
+                    <li class="first">￥<span>{{orderInfo.pay_price}}</span></li>
+                    <li class="second">合计:</li>
+                    <li class="third">共<span>{{orderInfo.total_number}}</span>件商品</li>
+                </ul>
+            </div>
+        </div>
+        <div class="list buy-result order ">
+            <div class="item clearfix font-color-ab">
+                <span >配送方式</span>
+                <span class="pull-right">{{postWay(orderInfo.post_way)}}</span>
+            </div>
+            <div class="item font-color-ab">
+                <span>支付方式</span>
+                <span class="pull-right">{{orderInfo.pay_way}}</span>
+            </div>
+            <div class="item font-color-ab">
+                <span>订单编号</span>
+                <span class="pull-right">{{orderInfo.order_id}}</span>
+            </div>
+            <div class="item font-color-ab">
+                <span>下单时间</span>
+                <span class="pull-right" style="width:150px;">{{orderInfo.order_time}}</span>
+            </div>
+        </div>
+    </ion-content>
+	<!-- begin交易成功 footer 5未评价 -->
+    	<div class="bar bar-footer  order operate-buttons ng-hide"
+    		ng-show="orderInfo.order_status==='5'">
+        	<div class="col ">
+       		<button class="button button-small button-outline button-stable button-block "
+       				send-delete-order="deleteOrder()"
+       				delete-order
+       		>删除订单
+       		</button>
+        	</div>
+        	<!--<div class="col ">-->
+       		<!--<button class="button button-small button-outline button-stable button-block ">申请售后</button>-->
+        	<!--</div>-->
+        	<!-- <div class="col ">
+       		<button class="button button-small button-outline button-stable button-block ">查看物流</button>
+        	</div> -->
+        	<div class="col">
+            	<div
+                            class="button button-small button-outline button-energized button-block"
+					       ui-sref="comment"
+
+                            >评价</div>
+        	</div>
+    	</div>
+    	<!--end交易成功 footer 5未评价 -->
+    	<!-- begin 卖家已发货 footer  4-->
+    	<div class="bar bar-footer  order operate-buttons ng-hide" 
+    		ng-show="orderInfo.order_status==='4'">
+        	<!-- <div class="col col-offset-25">
+       		<button class="button button-small button-outline button-stable button-block ">退款</button>
+        	</div>
+        	<div class="col ">
+       		<button class="button button-small button-outline button-stable button-block ">查看物流</button>
+        	</div> -->
+        	<div class="col">
+            	<button class="button button-small button-outline button-energized button-block"
+                						sure-receive
+                            accepter-userid="{{orderInfo.merchantid}}"
+                            order-id="{{orderInfo.order_id}}"
+                            ng-click="sureReceived($event)"
+
+                >确认收货</button>
+        	</div>
+    	</div>
+	<!--end 卖家已发货 footer  4-->
+	<!-- begin 待付款 footer  0-->
+	<div class="bar bar-footer  order operate-buttons ng-hide"
+		ng-show="orderInfo.order_status==='0'">
+        	<div class="col col-25 col-offset-50">
+       		<button class="button button-small button-outline button-stable button-block"
+       			send-cancle-order="cancleOrder()"
+       			cancle-order
+       		>取消订单
+       		</button>
+        	</div>
+        	<div class="col col-25 ">
+            	<button class="button button-small button-outline button-energized button-block"
+            		ng-click="goPay(orderInfo.pay_price,orderInfo.order_id)"
+                    	>立刻支付</button>
+        	</div>
+    </div>
+	<!-- end 待付款 footer  0-->
+	<!-- begin 买家已付款 footer 1-->
+	<!-- begin 买家已付款 footer  1-->
+</ion-view>

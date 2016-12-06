@@ -1,0 +1,37 @@
+<ion-view class="content-bg">
+    	<ion-nav-title class="nav-title-color" >
+        商品列表
+    	</ion-nav-title>
+
+		<div class="good-list mall">
+			<div class="tab-pane">
+				<ion-scroll direction="y" >
+					<div class="row row-wrap" >
+						<div class="col-50" ng-repeat="goods in produstList" >
+							<div class="card margin-top margin-bottom custom-card"
+								 ui-sref="detail"
+								 ng-attr-id="{{goodItem.id}}"
+								 ng-click="getGoodsId(goods.id)"
+							>
+								<div class="item item-image">
+									<img src="images/good.png" alt="示例图">
+									<img ng-src="{{goods.img_url}}" alt="商品图片 无" class="ng-hide">
+
+								</div>
+								<div class="item item-text-wrap no-border">
+									<span class="text-line-2">
+									{{goods.name}}
+									</span>
+								</div>
+								<div class="item item-divider text-left">
+									<span class="good-price">￥{{goods.price}}</span>
+									<span class="good-selled-amount">{{goods.selled_count}}人已购</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-scroll>
+			</div>
+		</div>
+
+</ion-view>

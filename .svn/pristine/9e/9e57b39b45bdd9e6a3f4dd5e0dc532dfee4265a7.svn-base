@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Order View Controller-->
+        <scene sceneID="43a-FC-Tbj">
+            <objects>
+                <viewController storyboardIdentifier="OrderViewController" id="qtY-hg-gJX" customClass="OrderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mqk-bu-z41"/>
+                        <viewControllerLayoutGuide type="bottom" id="YGr-cN-moc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5au-PL-YcJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcb-3a-1E6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kcb-3a-1E6" firstAttribute="leading" secondItem="5au-PL-YcJ" secondAttribute="leading" id="AdG-2v-lI7"/>
+                            <constraint firstAttribute="trailing" secondItem="kcb-3a-1E6" secondAttribute="trailing" id="Og5-1h-ngU"/>
+                            <constraint firstAttribute="bottom" secondItem="kcb-3a-1E6" secondAttribute="bottom" id="WTi-XX-nkZ"/>
+                            <constraint firstItem="kcb-3a-1E6" firstAttribute="top" secondItem="5au-PL-YcJ" secondAttribute="top" id="pI0-Np-hp6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="rootView" destination="kcb-3a-1E6" id="k0U-GZ-dDC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZE-w9-fmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="127"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,142 @@
+.discovery-bottom {
+    margin-bottom: 47px;
+}
+.discovery-detail-item .item {
+    padding: 10px 0;
+    margin: 0 10px;
+    background: #fafafa;
+    line-height: 30px;
+    border-width: 0 0 1px 0;
+}
+.discovery-detail-item .item h5 {
+    height: 36px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.discovery-detail-item .item-noboder{
+    border-width: 0;
+}
+.discover-like{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: url("../../images/like.png") 0 0  no-repeat;
+    background-size: 80px;
+    cursor: pointer;
+}
+.discover-like.active{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: url("../../images/likei-ac.png") 0 0  no-repeat;
+    background-size: 80px;
+}
+.discovery-collection{
+    display: block;
+    float: right;
+    width:25px ;
+    height: 25px;
+    background: url("../../images/collection.png") 0 0  no-repeat;
+    background-size: 25px;
+}
+.discovery-detail-item #collection{
+    color: #cccccc;
+}
+.discovery-detail-item #collection-cancle{
+    color: #feb821;
+    display: none;
+}
+
+/*discovery-comment 页面*/
+
+.comment-portrait img{
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 0;
+}
+.discovery-panle-other, .discovery-panle-cont{
+    height: 30px;
+    line-height: 30px;
+}
+.discovery-text{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 2px 0 0 0;
+    padding: 0;
+    border-bottom: solid #f3f3f3 1px;
+}
+.discovery-text input{
+    height: 47px;
+    line-height:47px;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #999999;
+}
+.discovery-text button{
+    padding: 0 20px;
+    background: #fe5621;
+    color: #ffffff;
+    border-radius: 0;
+}
+
+/*discovery-share 页面*/
+
+.discovery-share-item{
+    position:relative;
+    z-index:1000;
+}
+.discovery-share-box {
+    height:100%;
+    background:#000000;
+    opacity:0.3;
+    display: none;
+}
+.discovery-share-item .bar-footer{
+    position: fixed;
+    bottom:-140px;
+    height: 140px;
+    transition:bottom 0.7s;
+    -moz-transition:bottom 0.7s; /* Firefox 4 */
+    -webkit-transition:bottom 0.7s; /* Safari and Chrome */
+    -o-transition:bottom 0.7s; /* Opera */
+}
+.bar-footer-xs {
+    bottom:0;
+    transition:bottom 0.7s;
+    -moz-transition:bottom 0.7s; /* Firefox 4 */
+    -webkit-transition:bottom 0.7s; /* Safari and Chrome */
+    -o-transition:bottom 0.7s; /* Opera */
+}
+.discovery-share-item .button-large{
+    padding: 30px 0 0 0;
+    min-width: 68px;
+    font-size: 16px;
+    line-height: 53px;
+}
+.discovery-share-item .button-bar{
+    padding-top: 40px;
+}
+.discovery-share-item .button {
+    line-height: 50px;
+}
+.button-discovery-wx{
+    background: url("../../images/icon-wx.png") center 20px no-repeat;
+    background-size: 40px;
+}
+.button-discovery-pyq{
+    background: url("../../images/icon-pyq.png") center 20px no-repeat;
+    background-size: 34px;
+}
+.button-discovery-wb{
+    background: url("../../images/icon-wb.png") center 20px no-repeat;
+    background-size: 30px;
+}
+.button-discovery-dx{
+    background: url("../../images/icon-dx.png") center 20px no-repeat;
+    background-size: 34px;
+}

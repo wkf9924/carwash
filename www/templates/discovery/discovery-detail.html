@@ -1,0 +1,58 @@
+<ion-view>
+    <ion-nav-title>{{title}}</ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-share" ng-click="showShare()"></button>
+    </ion-nav-buttons>
+    <ion-content class="content-bg-fa discovery-bottom">
+        <div class="discovery-detail-item">
+            <div class="item">
+                <h5>
+                    <span class="pull-left">{{title}}</span>
+                    <!--<span class="discovery-collection"></span>-->
+                    <button class="pull-right button button-icon icon ion-star" id="collection" ng-click="collectionInfoadd()"></button>
+                    <button class="pull-right button button-icon icon ion-star" id="collection-cancle" ng-click="collectionInfocancle()"></button>
+                </h5>
+                <span class="discovery-time margin-right">{{publisher}}</span>
+                <span class="discovery-time">{{send_time}}</span>
+            </div>
+            <div class="item  item-text-wrap item-noboder">
+                <span>{{content}}</span>
+            </div>
+            <div class="item-image pdlr20">
+                <img ng-src="images/{{img_url}}" alt="" class="full-image border-radius">
+            </div>
+            <!--<div class="item item-noboder">-->
+                <!--<h5>1:轮胎是重中之重</h5>-->
+            <!--</div>-->
+            <!--<div class="item-image mglr20">-->
+                <!--<img ng-src="images/{{img_url}}" alt="" class="full-image border-radius">-->
+            <!--</div>-->
+            <!--<div class="item  item-text-wrap item-noboder">-->
+                <!--<span>{{content}}</span>-->
+            <!--</div>-->
+
+            <div class="item item-noboder text-center" >
+                <span class="discover-like active"ng-click="discoverContjia()" id="discover-like-active"  ng-init="count=130" ></span>
+                <span class="discover-like"  ng-click="discoverContjian()" id="discover-like" style="display: none;"  ng-init="count=130" ></span>
+            </div>
+            <div class="item item-noboder text-center">
+                <span class="light-dark">赞：{{likes_count}}</span>
+            </div>
+            <div class="item item-noboder">
+                <h5>用户评价<span class="light-dark">({{comment_count}})</span></h5>
+            </div>
+            <news-comment></news-comment>
+            <!--<div  ng-include="'templates/discovery/discovery-comment.html'"  ng-repeat="commentlist in commentlists"></div>-->
+            <div class="item item-noboder text-center">
+                <span class="light-dark">暂无更多评论</span>
+            </div>
+        </div>
+    </ion-content>
+    <div class="item row discovery-text" >
+        <input type="text" name="comment" class="col" placeholder="发表评论" ng-model="eva_content">
+        <button class="button col-20" ng-click="addEvaluate()">评论</button>
+    </div>
+
+    <!--<share-directive></share-directive>-->
+
+</ion-view>

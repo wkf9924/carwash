@@ -1,0 +1,28 @@
+<ion-view>
+    <ion-nav-buttons side="left" class="button-clear button " >
+     		<!-- <img src="images/back.png" alt="" class="title-png-sub" go-back-my> -->
+            	<i class="icon iconfont font-color-cbcbcb  Rback-button" go-back-my>&#xe64b;</i>
+     	</ion-nav-buttons>
+    <ion-nav-title >二维码凭证</ion-nav-title>
+    <ion-content class="content-bg">
+        <div class="servicebg-box padding clearfix">
+            <div class="text-center light-dark mt-20">请将此二维码出示给商家</div>
+            <div class="text-center mt-15"><img ng-src="{{servicerqcode}}"  alt="" class=""></div>
+            <div class="text-center light-dark margin-top">每分钟自动刷新</div>
+            <div class="light-dark mt-20">
+                <h>使用说明</h>
+                <p class="service-cont">
+                    1)到店后向商家出示上方二维码验证；<br>
+                    2)5座以上非营运小型轿车免费享受标准洗车服务一次；<br>
+                    3)SUV,VPN等车型需想商家另外支付5元洗车费；<br>
+                    4)本卷仅对洗洋洋服务订单有效，不可抵用其他服务。<br>
+                    注：本卷仅限本人当场打开使用。
+                </p>
+                <p> </p>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </ion-content>
+</ion-view>

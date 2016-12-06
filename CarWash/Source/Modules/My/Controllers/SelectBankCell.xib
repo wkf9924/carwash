@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectBankCell" rowHeight="137" id="KGk-i7-Jjw" customClass="SelectBankCell">
+            <rect key="frame" x="0.0" y="0.0" width="532" height="137"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="532" height="136"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="西安银行icon" translatesAutoresizingMaskIntoConstraints="NO" id="bR6-gP-V6D">
+                        <rect key="frame" x="10" y="5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="KoC-Ya-PDx"/>
+                            <constraint firstAttribute="width" constant="50" id="mJE-Lh-MJE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="西安银行储蓄卡(尾号1234)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVE-4z-dGl">
+                        <rect key="frame" x="80" y="5" width="442" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMX-FG-RM7">
+                        <rect key="frame" x="80" y="30" width="442" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.57647058819999997" green="0.57647058819999997" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="TMX-FG-RM7" secondAttribute="trailing" constant="10" id="JHe-3J-c4O"/>
+                    <constraint firstItem="wVE-4z-dGl" firstAttribute="leading" secondItem="bR6-gP-V6D" secondAttribute="trailing" constant="20" id="OEZ-JY-EuR"/>
+                    <constraint firstItem="TMX-FG-RM7" firstAttribute="height" secondItem="bR6-gP-V6D" secondAttribute="height" multiplier="0.5" id="WQy-3Q-Ua4"/>
+                    <constraint firstItem="TMX-FG-RM7" firstAttribute="bottom" secondItem="bR6-gP-V6D" secondAttribute="bottom" id="XZC-DU-krj"/>
+                    <constraint firstAttribute="trailing" secondItem="wVE-4z-dGl" secondAttribute="trailing" constant="10" id="bKd-7l-R9a"/>
+                    <constraint firstItem="bR6-gP-V6D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="eBW-sv-TO6"/>
+                    <constraint firstItem="TMX-FG-RM7" firstAttribute="leading" secondItem="bR6-gP-V6D" secondAttribute="trailing" constant="20" id="kOd-W2-Rql"/>
+                    <constraint firstItem="wVE-4z-dGl" firstAttribute="height" secondItem="bR6-gP-V6D" secondAttribute="height" multiplier="0.5" id="nkK-7o-Dyz"/>
+                    <constraint firstItem="wVE-4z-dGl" firstAttribute="top" secondItem="bR6-gP-V6D" secondAttribute="top" id="rAt-fc-UxV"/>
+                    <constraint firstItem="bR6-gP-V6D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wfN-MW-jmV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="accountBalance" destination="TMX-FG-RM7" id="blK-dE-B34"/>
+                <outlet property="bankIcon" destination="bR6-gP-V6D" id="Wfl-V3-2xg"/>
+                <outlet property="bankName" destination="wVE-4z-dGl" id="lXB-XJ-DwG"/>
+            </connections>
+            <point key="canvasLocation" x="477" y="334.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="西安银行icon" width="33" height="33"/>
+    </resources>
+</document>

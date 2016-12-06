@@ -1,0 +1,55 @@
+<ion-tabs  class="tabs-top tabs-light my-order">
+    <ion-tab title="全部" on-select="onTabSelected(5)" >
+
+        <ion-view>
+            <ion-content class="content-bg"
+                	overflow-scroll="false"
+            >
+
+                <div>
+                    <service-order></service-order>
+                </div>
+
+            </ion-content>
+        </ion-view>
+    </ion-tab>
+
+    <!--<ion-tab title="未付款" on-select="onTabSelected('0')" >-->
+        <!--<ion-view>-->
+            <!--<ion-content class="content-bg"-->
+            		<!--overflow-scroll="false"-->
+            <!--&gt;-->
+
+                <!--<div>-->
+                    <!--<service-order></service-order>-->
+                <!--</div>-->
+
+            <!--</ion-content>-->
+        <!--</ion-view>-->
+    <!--</ion-tab>-->
+    <ion-tab title="未使用" on-select="onTabSelected('1')" >
+        <ion-view>
+            <ion-content class="content-bg"
+            	overflow-scroll="false"
+            >
+
+                <div>
+                    <service-order></service-order>
+                </div>
+
+            </ion-content>
+        </ion-view>
+    </ion-tab>
+    <ion-tab title="已使用" on-select="onTabSelected('3')" >
+        <ion-view>
+            <ion-content class="content-bg"
+								overflow-scroll="false"
+            	>
+                <div>
+                    <service-order></service-order>
+                </div>
+
+            </ion-content>
+        </ion-view>
+    </ion-tab>
+</ion-tabs>

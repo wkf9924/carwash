@@ -1,0 +1,185 @@
+//
+//  MyWalletViewController.m
+//  CarWash
+//
+//  Created by xa on 16/7/18.
+//  Copyright © 2016年 xiyangyang. All rights reserved.
+//
+
+#import "MyWalletViewController.h"
+#import "GetCashViewController.h"
+#import "DefineConstant.h"
+#import "PayManager.h"
+#import <MJExtension.h>
+#import "GetAmontModel.h"
+#import "TopUpViewController.h"
+#import "BankCardAndTicketCell.h"
+
+#import "GetCashViewController.h"
+@interface MyWalletViewController ()<BZEventCenterDelegate,UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewHeight;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UILabel *bankBalance;//余额
+@property (weak, nonatomic) IBOutlet UIButton *VIPButton;
+@property (nonatomic, strong)GetAmontModel *model;
+
+@end
+
+@implementation MyWalletViewController
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[BZEventCenter defaultCenter] subscribeWithEventType:CWEventCenterTypeGetAmount callback:self];
+     [[BZEventCenter defaultCenter] subscribeWithEventType:CWEventCenterTypeGetAmountFail callback:self];
+    self.tabBarController.tabBar.hidden = YES;
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[BZEventCenter defaultCenter] cancelSubscribeWithEventType:CWEventCenterTypeGetAmount callback:self];
+    [[BZEventCenter defaultCenter] cancelSubscribeWithEventType:CWEventCenterTypeGetAmountFail callback:self];
+    self.tabBarController.tabBar.hidden = NO;
+    COM.isPay = NO;
+}
+- (void)eventCenter:(BZEventCenter *)eventCenter eventType:(NSString *)eventType callbackParam:(id)param{
+    
+    if ([eventType isEqualToString:CWEventCenterTypeGetAmount]) {
+        NSLog(@"余额查询:%@",param);
+        self.model = [[GetAmontModel alloc] init];
+        [self.model setValuesForKeysWithDictionary:param];
+        self.bankBalance.text = [NSString stringWithFormat:@"%.2f",[self.model.amount floatValue]];
+        
+    }else if ([eventType isEqualToString:CWEventCenterTypeGetAmountFail]) {
+        
+        
+    }
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setBackBarButton];
+    self.title = @"我的钱包";
+    NSString *userId = [COM getUserId];
+    if (userId.length == 0) {
+        
+    }else{
+        COM.isPay = YES;
+        [[PayManager sharedManager] getAmount:APPID userid:userId verifyKey:@""];
+    }
+   
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+//充值按钮回调
+- (IBAction)topUpButton:(UIButton *)sender {
+    //跳转充值界面
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MyWallet" bundle:nil];
+    TopUpViewController *touUp = [storyboard instantiateViewControllerWithIdentifier:@"TopUpVC"];
+    touUp.model = self.model;
+    [self.navigationController pushViewController:touUp animated:YES];
+}
+//提现按钮回调
+- (IBAction)getCashButton:(UIButton *)sender {
+    NSString *bankCardCount = [COM getBankCardCount];
+    if (bankCardCount == nil || [bankCardCount isEqualToString:@"0"] || bankCardCount.length == 0) {
+        LCSUCCESS_ALSERT(@"提现需要到账银行卡,请返回在银行卡界面绑定后重新尝试!");
+    }else{
+        //跳转提现界面
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MyWallet" bundle:nil];
+        GetCashViewController *getCash = [storyboard instantiateViewControllerWithIdentifier:@"GetCashVC"];
+        getCash.model = self.model;
+        [self.navigationController pushViewController:getCash animated:YES];
+    }
+    
+}
+//成为VIP 按钮回调
+- (IBAction)VIPButtonAction:(id)sender {
+    NSString *bankCardCount = [COM getBankCardCount];
+    if (bankCardCount == nil || [bankCardCount isEqualToString:@"0"] || bankCardCount.length == 0) {
+        LCSUCCESS_ALSERT(@"充值需要到账银行卡,请返回在银行卡界面绑定后重新尝试!");
+    }else{
+        //跳转充值界面
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MyWallet" bundle:nil];
+        TopUpViewController *touUp = [storyboard instantiateViewControllerWithIdentifier:@"TopUpVC"];
+        touUp.model = self.model;
+        [self.navigationController pushViewController:touUp animated:YES];
+    }
+    
+}
+
+#pragma mark tableView代理方法实现
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 10;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section == 0) {
+        return 1;
+    }else{
+       return 2;
+    }
+    
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 41;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 10;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    BankCardAndTicketCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BankCardAndTicketCell" forIndexPath:indexPath];
+    
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            cell.image.image = [UIImage imageNamed:@"wallet交易查询icon"];
+            cell.name.text = @"交易记录";
+            cell.count.text = @"";
+            return cell;
+        }
+    }else if (indexPath.section == 1){
+        if (indexPath.row == 0) {
+            cell.image.image = [UIImage imageNamed:@"wallet消费券icon"];
+            cell.name.text = @"消费券";
+            if ([[COM getTiketCount] isEqualToString:@"0"]) {
+                cell.count.text = @"";
+                return cell;
+            }else{
+                cell.count.text = [NSString stringWithFormat:@"%@ 张未使用",[COM getTiketCount]];
+                return cell;
+            }
+            
+            
+        }else{
+            cell.image.image = [UIImage imageNamed:@"wallet银行卡icon"];
+            cell.name.text = @"银行卡";
+            if ([[COM getBankCardCount] isEqualToString:@"-1"]) {
+                cell.count.text = @"";
+                return cell;
+            }else{
+                cell.count.text = [NSString stringWithFormat:@"%@张",[COM getBankCardCount]];
+                return cell;
+            }
+        }
+    }
+        return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 0) {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"TransactionVC" bundle:nil];
+        [self.navigationController pushViewController:[sb instantiateViewControllerWithIdentifier:@"TransactionVC"] animated:YES];
+    }else{
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"BankCard" bundle:nil];
+        [self.navigationController pushViewController:[sb instantiateViewControllerWithIdentifier:@"MyBankCardVC"] animated:YES];
+    }
+}
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
+@end

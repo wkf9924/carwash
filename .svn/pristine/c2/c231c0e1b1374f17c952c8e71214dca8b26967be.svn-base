@@ -1,0 +1,11 @@
+<ion-view>
+	<ion-nav-title>图文详情</ion-nav-title>
+	<ion-content class="content-bg"
+    		overflow-scroll="false"
+  >
+    		<div class="picture-detail" ng-bind-html="pictureDetail">
+    			
+    		</div>
+	</ion-content>
+    
+</ion-view>

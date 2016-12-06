@@ -1,0 +1,21 @@
+<ion-view>
+	<ion-nav-title>选择城市</ion-nav-title>
+	<ion-content class="content-bg">
+		<div class="list" select-city>
+  			<div class="item item-button-right" 
+  			ui-sref="select-district"
+  			ng-repeat=" city in cityArr"
+  			item-code={{city.item_code}}
+  			city-repeat-finished
+  			>
+    				<span class="district">{{city.item_name}}</span>
+    				<button class="button button-clear button-stable">
+      				<i class="icon ion-ios-arrow-right"></i>
+    				</button>
+  			</div>
+		</div>
+		
+	
+		
+	</ion-content>
+</ion-view>

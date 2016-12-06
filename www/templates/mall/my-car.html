@@ -1,0 +1,120 @@
+<ion-view>
+		<ion-nav-title>
+			<div cart-num>购物车 
+				<span class="ng-show" ng-hide="buyedGoodsList.length==0">({{buyedTotalCount()}})</span>
+			</div>
+		</ion-nav-title>
+		<ion-nav-buttons side="right">
+              	<button class="button button-clear" ng-click="edit()" ng-hide="isEdit || buyedGoodsList.length==0" >
+                		编辑
+              	</button>
+              	<button class="button button-clear" ng-click="edit()" ng-hide="!isEdit || buyedGoodsList.length==0">
+                		完成
+              	</button>
+     		</ion-nav-buttons>
+     		<!-- <ion-nav-buttons side="left" class="button-clear button " >
+     			<img src="images/back.png" alt="" class="title-png-sub" go-back-my>
+     		</ion-nav-buttons> -->
+     		<ion-nav-buttons side="left" class="button-clear button "  >
+     			<i class="icon iconfont font-color-cbcbcb  Rback-button" go-back-my>&#xe64b;</i>
+     		</ion-nav-buttons>
+	<ion-content class="content-bg has-footer padding-top"
+		overflow-scroll="false"
+
+	>
+	<div class="ng-hide my-car-no" ng-show="buyedGoodsList.length==0">
+		 购物车还没有相关商品
+	</div>
+	<div class="list list-borderless my-car" ng-repeat="list in buyedGoodsList">
+		<div class="item item-checkbox item-thumbnail-left">
+			<div class="checkbox checkbox-assertive">
+				<input type="checkbox" name="" 
+					ng-model="list.checked"
+					ng-checked="list.checked" 
+					ng-change="selectList(selectChecked,isEdit)"
+					ng-hide="isEdit"/>
+				<input type="checkbox" name="" 
+					ng-hide="!isEdit"
+					ng-checked="list.eidtChecked"
+					ng-model="list.eidtChecked"
+					ng-change="selectList(editChecked,isEdit)"/>
+			</div>
+			<div class="item-content">
+				<img ng-src="{{list.img_url | toImgUrl}}"
+						error-src="images/defaultImg.png"
+				 >
+				<div class="text-line-2">
+					{{list.name }}
+				</div>
+				<div class="good-price">￥<span>{{list.price}}</span>
+				</div>
+				<div class="clearfix">
+					<div class="pull-left mt-5 font-14 font-color-898989">
+						X<span>{{list.buy_count}}</span>
+					</div>
+					<div class="button-bar-box font-14">
+						<ul class="button-bar" 
+								act-buy-count
+								pro-name="list"
+								pro-token="{{token}}"
+								>
+							<li class="button button-small first" ng-click="minusCount(list)">
+								<i class="ion-minus-round"></i>
+							</li>
+							<li class="button button-small second ">
+								{{list.buy_count}}
+							</li>
+							<li class="button button-small third" ng-click="plusCount(list)" >
+								<i class=" ion-plus-round"></i>
+							</li>
+						</ul>
+					</div>
+					<div class="pull-right surplus-num mt-5 font-14 font-color-898989">
+						剩余<span>{{list.stock_count}}</span>件
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+		</ion-content>
+		选择结算
+		<div class="bar bar-footer my-car-footer no-padding ng-show" ng-hide="isEdit || buyedGoodsList.length==0">
+			<div class="col no-padding">
+				<label class="item item item-checkbox item-borderless">
+					<div class="checkbox checkbox-assertive">
+						<input type="checkbox" name="" 
+						ng-checked="selectChecked.isCheckedAll" 
+						ng-model="selectChecked.isCheckedAll" 
+						ng-change="allSelect(selectChecked,isEdit)"/>
+					</div>
+					<div class="item-content" >全选</div>
+				</label>
+			</div>
+			<div class="col no-padding">
+				合计￥ <span>{{totalPrice()}}</span>
+			</div>
+			<div class="col text-line-1 no-padding" 
+			ng-click="getList(buyedGoodsList)"
+			>去结算</div>
+		</div>
+		<!-- 删除编辑 -->
+		<div class="bar bar-footer my-car-footer no-padding ng-show" ng-hide="!isEdit || buyedGoodsList.length==0">
+			<div class="col no-padding">
+				<label class="item item item-checkbox item-borderless">
+					<div class="checkbox checkbox-assertive">
+						<input type="checkbox" name=""
+							ng-checked="editChecked.isCheckedAll"
+							ng-model="editChecked.isCheckedAll"
+							ng-change="allSelect(editChecked,isEdit)"
+						 />
+					</div>
+					<div class="item-content" >全选</div>
+				</label>
+			</div>
+			<div class="col no-padding" ng-click="showPopup()">
+				删除
+			</div>
+			
+		</div>
+</ion-view>

@@ -1,0 +1,71 @@
+<ion-view class="content-bg">
+    	<ion-nav-title class="nav-title-color" >
+        车品商城
+    	</ion-nav-title>
+    	<div class="content-bg" id = "content">
+        	<ion-slide-box on-slide-changed="slideHasChanged($index)"  
+        					does-continue="true"
+        					slide-interval="3000"
+        					auto-play="false"
+        					class="mall-slider"
+        				>
+		  	<ion-slide>
+		    		<div class="" ui-sref="detail">
+		    			<img ng-src="images/main_banner.png" alt="" class="full-image block">
+		    		</div>
+		  	</ion-slide>
+		  	<ion-slide>
+		    		<div class="" ui-sref="detail">
+		    			<img ng-src="images/main_banner2.png" alt="" class="full-image block">
+		    		</div>
+		  	</ion-slide>
+				<ion-slide>
+					<div class="" ui-sref="detail">
+						<img ng-src="images/main_banner.png" alt="" class="full-image block">
+					</div>
+				</ion-slide>
+				<ion-slide>
+					<div class="" ui-sref="detail">
+						<img ng-src="images/main_banner2.png" alt="" class="full-image block">
+					</div>
+				</ion-slide>
+		</ion-slide-box>
+
+		<!--  end banner slidder -->
+	</div>
+		<div class="tabsMall-box" tab-slide-box>
+				
+			<div class="row no-padding mall-tabs ">
+				<div class="tab-icons" style="width:100%">
+					<div class="tab-ic-wrp">
+						<ion-scroll direction="x" 
+							class="tsb-hscroll no-margin scroll-view ionic-scroll mall"
+							>
+							<a href="javascript:;" 
+								class="badgeMall" 
+								ng-repeat="class in classes"
+								load-finished
+								ng-click="changeClass(class.id)"
+								 >
+									{{class.name}}
+							</a>
+						</ion-scroll>
+					</div>
+				</div>
+				<!-- <div class="col-10 more-class">
+					<img src="images/list.png" alt="">
+				</div> -->
+			</div>
+
+			<div class="good-list mall">
+				<ion-content style="top:1px;"
+					overflow-scroll="false"
+				>
+						<div class="row  row-wrap"
+							ng-include=" 'templates/mall/good-item.html' ">
+						</div>
+				</ion-content>
+			</div>
+
+		</div>
+</ion-view>

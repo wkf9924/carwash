@@ -1,0 +1,10 @@
+<div ng-repeat="commentlist in commentlists">
+    <div class="item">
+        <div class="discovery-panle-other">
+            <span class="comment-portrait pr-10"><img ng-src="images/{{commentlist.img_url}}"  alt="" class="full-image border-radius"></span>
+            <span class="pull-left">{{commentlist.name}}</span>
+            <span class="pull-right light-dark">{{commentlist.eva_time}}</span>
+        </div>
+        <div class="discovery-panle-cont">{{commentlist.eva_content}}</div>
+    </div>
+</div>

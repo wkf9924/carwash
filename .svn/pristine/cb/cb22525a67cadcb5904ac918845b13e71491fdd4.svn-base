@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>content</key>
+		<string>店铺资料已认证</string>
+		<key>step</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>3</string>
+		<key>content</key>
+		<string>电话确认已通过</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>4</string>
+		<key>content</key>
+		<string>到店确认已通过</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>5</string>
+		<key>content</key>
+		<string>审核通过，恭喜您开店成功！</string>
+	</dict>
+</array>
+</plist>

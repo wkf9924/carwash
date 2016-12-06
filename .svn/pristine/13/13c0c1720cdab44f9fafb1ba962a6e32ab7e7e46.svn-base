@@ -1,0 +1,52 @@
+.discovery-item .item {
+    padding:10px 16px ;
+}
+.discovery-time {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    color: #999999;
+}
+/*discovery-item 页面*/
+.discovery-title {
+    position: relative;
+    text-align: left;
+    height:30px;
+    line-height: 30px;
+    margin-top: -30px;
+    padding:0 0 0 20px;
+    background:rgba(225,225,225,0.6);
+    color:#ffffff;
+}
+.discovery-time {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    color: #999999;
+}
+.discover-comment, .discover-laud {
+    float: right;
+    line-height: 30px;
+}
+.discover-comment span, .discover-laud span{
+    float: left;
+}
+.discover-comment-icon{
+    display: block;
+    width: 28px;
+    height: 27px;
+    background: url("../../images/comment.png") 0 6px no-repeat;
+    background-size:20px ;
+}
+.discover-laud-icon {
+    display: block;
+    width: 28px;
+    height: 27px;
+    background: url("../../images/laud.png") 0 2px no-repeat;
+    background-size:20px ;
+}
+.discovery-item .item-image img{
+    min-height: 120px;
+    height: 120px;
+    display: block;
+}

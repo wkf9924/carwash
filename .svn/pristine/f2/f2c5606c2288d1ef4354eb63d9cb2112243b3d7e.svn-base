@@ -1,0 +1,439 @@
+.content-bg {
+    display: block;
+    // width: 100%;
+    // height: 100%;
+    background-color: #f0f0f0;
+ }
+.content-bg-fa {
+
+    background-color: #fafafa;
+}
+.nav-title-color {
+    color:#666666;
+}
+.auto-fit-width {
+    width:100%;
+}
+.pull-right {
+    float: right !important;
+}
+.pull-left {
+    float: left !important;
+}
+.width-50 {
+    width:50%;
+}
+.display-inline-block{
+    display: inline-block !important;
+}
+
+.border-radius {
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+}
+.no-border {
+    border: 0 !important;
+    border-width: 0px !important;
+}
+.no-padding {
+    padding:0px;
+}
+.no-margin {
+    margin:0px;
+}
+.margin {
+    margin:10px;
+}
+.mgtb20 {
+    margin:20px 0;
+}
+.mglr20 {
+    margin:0 20px;
+}
+.pdlr20{
+    padding:0 20px;
+}
+.bg-ff{
+    background-color:#ffffff;
+}
+.bg-f2{
+    background-color:#f2f2f2 ;
+}
+.bg-fa{
+    background-color:#fafafa;
+}
+
+.pdbt10{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.padding-top{
+    padding-top: 10px;
+}
+.padding-right-20{
+    padding-right:20px !important;
+}
+.margin-top {
+    margin-top: 10px;
+}
+.margin-bottom {
+    margin-bottom: 10px;
+}
+.margin-left {
+    margin-left: 10px;
+}
+.margin-right {
+    margin-right: 10px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+.mr30 {
+    margin-right: 30px;
+}
+
+
+.strong-dark{
+    color: #666666;
+}
+.light-dark{
+    color: #999999;
+}
+.text-line-2 {
+    /*多行(2行)*/
+    word-break:break-all;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden !important;
+
+}
+.text-line-1 {
+    /*多行(1行)*/
+    word-break:break-all;
+
+    -webkit-line-clamp:1;
+    -webkit-box-orient:vertical;
+    overflow:hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+}
+
+
+
+/*字体颜色*/
+.font-color-ab{
+    color:#ababab !important;
+}
+.font-color-f{
+    color:#fff !important;
+}
+.font-color-ff9800{
+    color:#ff9800 !important;
+}
+.font-color-ff5722{
+    color:#ff5722 !important;
+}
+.font-color-b2{
+    color:#b2b2b2 !important;
+}
+.font-color-898989{
+    color:#898989 !important;
+}
+.font-color-cbcbcb{
+    color:#CBCBCB; !important;
+}
+
+
+
+/*字体颜色*/
+.border-t{
+    
+}
+
+/*背景色工具*/
+.bgc-f{
+    background-color:#fff!important;
+}
+.bgc-f2{
+    background-color:#f2f2f2!important;
+}
+.bgc-orange{
+    background-color:#f47b00!important;
+}
+/*背景色工具*/
+/*字体大小工具*/
+.font-12{
+    font-size:12px!important;
+}
+.font-14{
+    font-size:14px!important;
+}
+.font-16{
+    font-size:16px!important;
+}
+.font-18{
+    font-size:18px!important;
+}
+
+.font-22{
+    font-size:22px!important;
+}
+
+.whhite-normal{
+    white-space: normal; !important;
+}
+.line-height-30{
+    line-height:30px;
+}
+/*字体大小工具*/
+/*border too*/
+.border-t{
+    border-top: solid 1px #ddd !important;
+}
+.border-b{
+    
+    border-bottom: solid 1px #ddd !important;
+}
+.border-t{
+    border: 0;
+    border-top: solid 1px #ddd;
+}
+
+/*border too*/
+/*mrgin-right*/
+.mr--10{
+    margin-right:-10px !important;
+}
+.mr-10{
+    margin-right:10px !important;
+}
+.mr-15{
+    margin-right:15px !important;
+}
+.mr-20{
+    margin-right:20px !important;
+}
+.mr-25{
+    margin-right:25px !important;
+}
+.mr-30{
+    margin-right:30px !important;
+}
+
+/* margin-bottom */
+.mb-0{
+    margin-bottom:0px !important;
+}
+.mb-5{
+    margin-bottom:5px !important;
+}
+.mb-8{
+    margin-bottom:8px !important;
+}
+.mb-10{
+    margin-bottom:10px !important;
+}
+.mb-15{
+    margin-bottom:15px !important;
+}
+.mb-20{
+    margin-bottom:20px !important;
+}
+.mb-25{
+    margin-bottom:25px !important;
+}
+.mb-30{
+    margin-bottom:30px !important;
+}
+
+
+/* margin-top */
+.mt-0{
+    margin-top:0px !important;
+}
+.mt-5{
+    margin-top:5px !important;
+}
+.mt-8{
+    margin-top:8px !important;
+}
+.mt-10{
+    margin-top:10px !important;
+}
+.mt-15{
+    margin-top:15px !important;
+}
+.mt-20{
+    margin-top:20px !important;
+}
+.mt-25{
+    margin-top:25px !important;
+}
+.mt-30{
+    margin-top:30px !important;
+}
+/*margin-left */
+.ml--12{
+    margin-left:-12px !important;
+}
+
+
+
+/*外边距*/
+/* 内边距 */
+.p-0{
+    padding:0px !important;
+}
+
+/* padding-bottom */
+.pb-10{
+    padding-bottom: 10px!important;
+}
+.padding-5{
+	padding: 5px !important;
+}
+.pb-8{
+    padding-bottom: 8px!important;
+}
+.pb-20{
+    padding-bottom: 20px!important;
+}
+.pb-large{
+    padding-bottom: 100px!important;
+}
+/* padding-top */
+.pt-10{
+    padding-top: 10px !important;
+}
+.pl-10{
+    padding-left: 10px;
+}
+.pr-10{
+    padding-right: 10px;
+}
+
+.pt-20{
+    padding-top: 20px !important;
+}
+.pl-20{
+    padding-left: 20px !important;
+}
+.pr-20{
+    padding-right: 20px !important;
+}
+/* 更多 */
+.cont-ge {
+    display: inline-block;
+    width: 95%;
+    max-width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.contz-ge {
+    display: inline-block;
+    max-width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.contl-ge {
+    display: inline-block;
+    max-width: 75%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cont-tel {
+    /*width:120px;*/
+    overflow: hidden;
+}
+.cont-price {
+    display: inline-block;
+    max-width: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cont-tel a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* 按钮 */
+.button{
+    border-color: transparent;
+}
+
+/*向右箭头 */
+.ion-arrow-right{
+    	font-size:24px !important;
+    	margin-top: -2px;
+    	margin-bottom: -2px;
+    	float:right;
+    	color:#CBCBCB !important;
+}
+.title-png{
+	display:block;
+	margin-left:0.5px;
+	margin-top:-6px;
+  	width:44px;
+    	height:44px;
+     padding:9.5px;
+}
+.title-png-sub{
+    display:block;
+	margin-left:0px;
+	margin-top:-6px;
+  	width:44px;
+    	height:44px;
+     padding:9.5px;
+}
+
+
+/* 返回按钮 */
+.btnretrun {
+    display: block;
+    float: left;
+    width:43px;
+    height: 43px;
+    background: url("../images/return.png") left center no-repeat;
+    background-size: 30px;
+}
+/* 自定义复选框的大小 */
+.item-checkbox .custom-checkbox{
+	top:57%;
+}
+.custom-checkbox{
+
+}
+.custom-checkbox input{
+	width:20px;
+	height: 20px;
+}
+.custom-checkbox input:after{
+	top:25% !important;
+	left:16%!important;
+	width:13px !important;
+	height: 6px !important;
+}
+.loadingCustome,  .loaded{
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+ }
+ 
+/*去掉bar的底线 */
+/*@media not all, (-webkit-min-device-pixel-ratio: 1.5), not all, (min-resolution: 144dpi), (min-resolution: 1.5dppx).bar {*/
+    /*background-size:100%,0px !important;*/
+/*}*/
+.Rback-button{
+    height:32px;
+    line-height:32px;
+    font-size: 26px;
+    margin-left: 7px;
+}   

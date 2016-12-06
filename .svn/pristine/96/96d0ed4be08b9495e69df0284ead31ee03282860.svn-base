@@ -1,0 +1,33 @@
+.sure-order{
+  
+  margin-bottom: 0px;
+}
+.sure-order>.goodItem+.goodItem{
+  //margin-top:15px;
+}
+.sure-order-footer>.col{
+  line-height: 44px;
+  text-align:center;
+
+}
+.sure-order-footer>.col:first-child{
+  color:#ff5722;
+
+}
+.sure-order-footer>.col:last-child{
+  background-color:#ff5722;
+  color:#fff;
+}
+.add-address.item {
+ 	 padding-right: 40px !important;
+ 	padding-left: 45px !important;
+ 	white-space: normal !important;
+      padding-top: 10px  !important;
+      padding-bottom: 10px !important;
+}
+.add-address.item.activated{
+    background-color: #fff!important;
+}
+.address{
+  line-height:30px;
+}

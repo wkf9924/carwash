@@ -1,0 +1,102 @@
+	<div class="loaded ng-hide" ng-show="allData.length==0">
+		您还没有相关订单
+	</div>
+
+    	<div class="list order" 
+          	ng-repeat="item in allData" 
+          	ui-sref="order-info"
+          	ng-click="getId(item.order_id)"
+          	>
+       	<div class="item item-divider bgc-f no-border clearfix deal-successed">
+           	<span>
+                	订单时间：<span class="font-color-ab">{{item.order_time}}</span>
+           	</span>
+          	 	<span class="pull-right font-color-ff9800 ng-show" ng-hide="item.order_status==='5'">{{whichStaus(item.order_status)}}</span>
+          	 	<img src="images/order/successed-icon.png" class="ng-hide" alt="" ng-show="item.order_status==='5'">
+       	</div>
+       	<div class="good-list" ui-sref="goWhichPage(item.order_status)">
+           	<div class="item item-text-wrap item-thumbnail-left no-border good-item" ng-repeat="detail in item.order_details">
+               		<img class="good-img" 
+                    		ng-src="{{detail.img_url | toImgUrl}}" 
+                    		error-src="images/defaultImg.png"
+                    		>
+               		<div class="text-line-2 ">
+                   		{{detail.name}}
+               		</div>
+               		<div class="good-price font-color-898989">
+                   		￥<span>{{detail.price}}</span>
+               		</div>
+               		<div class="good-num mt-5">
+                  		 X <span>{{detail.number}}</span>
+               		</div>
+           	</div>
+       	</div>
+         	<div class="item item-divider bgc-f no-border " >
+             	<ul class="clearfix mb-8 pb-8 border-b">
+                 	<li class="pull-right">合计:<span class="font-color-ab">￥</span><span class="font-color-ab">{{item.pay_price}}</span></li>
+                 	<li class="pull-right font-14 font-color-ab mr-20">共:<span>{{item.total_number}}</span>件商品</li>
+             	</ul>
+				<!-- begin待付款 -->
+             <div class="clearfix operate-buttons ng-hide" ng-show="item.order_status==='0'" attr="{{item.order_status}}">
+                 	<button class="  button-energized button button-small button-outline pull-right ">立刻支付</button>
+                 	<button 
+                  class="button button-small button-outline button-stable pull-right mr-20"
+                  cancle-order
+                  send-cancle-order="cancleOrder(item.order_id,item)"
+                  >
+                  取消支付</button>
+             </div>
+				<!-- end 待付款 -->
+				<!-- begin 关闭交易 -->
+             	<div class="clearfix operate-buttons mt-8 ng-hide" ng-show="item.order_status=='7'">
+               		<button 
+                        	class="button button-small button-outline button-stable pull-right "
+                        	delete-order
+                        	send-delete-order="deleteOrder(item.order_id,$index)"
+                        	>删除订单
+                        </button>
+           	</div>
+           	<!-- end 关闭交易 -->
+           	<!--begin买家已付款 -->
+           	<div class="clearfix operate-buttons ng-hide" ng-show="item.order_status=='3'">
+               	<button class="button button-small button-outline button-stable pull-right ">查看详情</button>
+           	</div>
+				<!--end 买家已付款 -->
+				<!-- begin 卖家已发货 -->
+		<div class="clearfix operate-buttons ng-hide" ng-show="item.order_status=='4'">
+           		<button class="button button-small button-outline button-energized pull-right "
+           									sure-receive
+                            accepter-userid="{{item.merchantid}}"
+                            order-id="{{item.order_id}}"
+                            ng-click="sureReceived($event)"
+           		 >
+                    	确认收货
+             	</button>
+               	<button class="button button-small button-outline button-stable pull-right mr-20">查看详情</button>
+           	</div>
+				<!-- end  卖家已发货 -->
+				<!-- begin交易成功 -->
+		<div class="clearfix operate-buttons ng-hide" ng-show="item.order_status=='5'">
+               	<button class="button button-small button-outline button-stable pull-right ng-show" 
+                      		 ng-click="goComment(item,$event)"
+					                 ng-hide="item.order_status==='5'&&item.order_status==='1'"
+
+                      		>评价</button>
+               	<!-- <button class="button button-small button-outline button-stable pull-right mr-10"
+						
+                  			>
+                  			查看物流
+                	</button> -->
+               	<!--<button class="button button-small button-outline button-stable pull-right mr-10"-->
+						<!---->
+               			<!--&gt;申请售后</button>-->
+               	<button class="button button-small button-outline button-stable pull-right mr-10"
+					delete-order
+                        	send-delete-order="deleteOrder(item.order_id,$index)"
+               				>
+               				删除订单
+               	</button>
+           	</div>
+				<!-- end交易成功 -->
+         	</div>
+    	</div>

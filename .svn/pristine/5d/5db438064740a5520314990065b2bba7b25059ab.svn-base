@@ -1,0 +1,29 @@
+<div class="discovery-item"
+     ng-repeat="discovery in discoverys"
+     discovery-id="{{discovery.id}}"
+>
+    <div class="margin-top margin-bottom">
+        <div class="item-image">
+            <a href="#/discovery-detail"  ng-click="discoveryEdits(discovery.id)">
+                <img ng-src="images/{{discovery.img_url}}"  alt="" class="full-image border-radius">
+            </a>
+            <div  class="discovery-title">{{discovery.title}}</div>
+        </div>
+        <div class="item item-text-wrap no-border">
+            <span class="text-line-2">{{discovery.content}}</span>
+        </div>
+        <div class="item  no-border">
+            <span class="discovery-time">{{discovery.send_time}}小时前</span>
+            <div  class="pull-right">
+                <div class="discover-laud">
+                    <span class="light-dark margin-right">{{discovery.likes_count}}</span>
+                    <span class="discover-laud-icon"></span>
+                </div>
+                <div class="discover-comment mr30">
+                    <span class="light-dark margin-right">{{discovery.comment_count}}</span>
+                    <span class="discover-comment-icon"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

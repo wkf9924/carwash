@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shop CardVC-->
+        <scene sceneID="aof-Vv-0xP">
+            <objects>
+                <viewController storyboardIdentifier="ShopCardVC" id="92N-pT-l3B" customClass="ShopCardVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RYM-mT-R2N"/>
+                        <viewControllerLayoutGuide type="bottom" id="BiP-pj-Uss"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4F7-AE-RLB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lm5-44-SX4">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Lm5-44-SX4" secondAttribute="bottom" id="QyF-d7-Np8"/>
+                            <constraint firstItem="Lm5-44-SX4" firstAttribute="leading" secondItem="4F7-AE-RLB" secondAttribute="leading" id="kzS-Ln-wy6"/>
+                            <constraint firstItem="Lm5-44-SX4" firstAttribute="top" secondItem="4F7-AE-RLB" secondAttribute="top" id="lmN-vg-nXs"/>
+                            <constraint firstAttribute="trailing" secondItem="Lm5-44-SX4" secondAttribute="trailing" id="tcb-iH-Gt3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="rootView" destination="Lm5-44-SX4" id="rPb-Io-uAO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jTK-kH-NeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-412" y="-55"/>
+        </scene>
+    </scenes>
+</document>

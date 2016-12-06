@@ -1,0 +1,68 @@
+
+  <ion-tabs  class="tabs-top tabs-light my-order" >
+		<ion-tab title="全部" on-select="on_select()" >
+			<ion-view>
+				<ion-content class="content-bg"
+					overflow-scroll="false"
+				>
+					<div ng-include="'templates/mall/myorder-template.html'" class="pb-large">
+					</div>
+      				<!-- end交易成功 -->
+				</ion-content>
+			</ion-view>
+		</ion-tab>
+
+		<ion-tab title="待付款" on-select="on_select('0')" >
+			<ion-view>
+				<ion-content class="content-bg"
+					overflow-scroll="false"
+				>
+					<!-- begin 待付款 -->
+				  		<div ng-include="'templates/mall/myorder-template.html'" >
+						
+						</div>
+					 <!-- end 待付款 -->
+				</ion-content>
+			</ion-view>
+		</ion-tab>
+		<ion-tab title="待发货" on-select="on_select('3')" >
+			<ion-view>
+				<ion-content class="content-bg"
+				overflow-scroll="false"
+				>
+					<!-- begin买家已付款 -->
+				    	<div ng-include="'templates/mall/myorder-template.html'">
+						</div>
+				      <!-- end买家已付款 -->
+				</ion-content>
+			</ion-view>
+		</ion-tab>
+		<ion-tab title="待收货" on-select="on_select('4')" >
+			<ion-view>
+				<ion-content class="content-bg"
+					overflow-scroll="false"
+				>
+											
+					<!-- begin卖家已发货 -->
+				  		<div ng-include="'templates/mall/myorder-template.html'">
+						</div>
+				      <!-- end卖家已发货-->
+				</ion-content>
+			</ion-view>
+		</ion-tab>
+		<ion-tab title="待评价" on-select="on_select('5')" >
+			<ion-view>
+				<ion-content class="content-bg"
+					overflow-scroll="false"
+					>
+					 <!-- begin 待评价 -->
+					 <div ng-include="'templates/mall/myorder-template.html'">
+					</div>
+				    <!-- end 待评价 -->
+				</ion-content>
+			</ion-view>
+		</ion-tab>
+
+	</ion-tabs>
+     
+

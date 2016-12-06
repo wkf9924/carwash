@@ -1,0 +1,7 @@
+.card-agreement{
+    color: #666666;
+}
+.card-agreement p{
+    line-height: 30px;
+    text-indent: 24px;
+}

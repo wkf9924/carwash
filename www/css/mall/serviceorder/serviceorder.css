@@ -1,0 +1,179 @@
+/*服务全部订单列表*/
+.service-cont {
+    /*border-top: solid #dddddd 1px;*/
+}
+.soreder-dfk-item{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fafafa;
+}
+.soreder-item {
+    height: 100%;
+    margin: 10px;
+    border:solid #dddddd 1px;
+    background: #ffffff;
+    border-radius:5px;
+}
+.soreder-basic+div{
+    border-top:solid #f0f0f0 1px;
+
+}
+.soreder-list-item{
+    position: relative;
+    padding: 10px;
+    clear: both;
+}
+.soreder-list-item img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.soreder-list-cont{
+    margin-left: 50px;
+    padding: 5px 10px 15px 0;
+    background: url("../../../images/order-pic04.png") right 10px no-repeat;
+    background-size: 10px 14px;
+    line-height: 25px;
+}
+
+/*.soreder-panle {*/
+    /*background: #f47b00;*/
+/*}*/
+
+.soreder-dfk {
+    color: #ffffff;
+    padding: 10px;
+}
+.soreder-dfk p{
+    margin-top: 20px;
+}
+.soreder-dfk img {
+    width: 80px;
+}
+
+.soreder-contact-item{
+    line-height: 30px;
+    padding: 10px;
+    margin: 20px 0;
+    border-top: solid #dddddd 1px;
+    border-bottom: solid #dddddd 1px;
+    background: #ffffff;
+}
+.soreder-contact-left {
+    background: url("../../../images/fworder-title.png") left center no-repeat;
+    background-size: 20px;
+    text-indent: 25px;
+}
+.soreder-contact-right {
+    background: url("../../../images/fworder-tel.png") left center no-repeat;
+    background-size: 18px;
+    text-indent: 25px;
+}
+.soreder-title {
+    height: 30px;
+    line-height: 30px;
+    border-bottom:solid #eeeeee 1px ;
+}
+.soreder-info-list{
+    padding: 10px 0;
+}
+.soreder-info-list img {
+    float: left;
+    width: 50px;
+    border-radius: 25px;
+}
+.soreder-info-list span {
+    margin-top: 10px;
+}
+.soreder-contact-list {
+    border-bottom:solid #eeeeee 1px ;
+    line-height: 35px;
+
+}
+.soreder-contact-list:last-child {
+    border-bottom:none;
+}
+.soreder-btn-item {
+    /*margin: 0 0 20px 0;*/
+    height: 54px;
+    padding: 5px 0 5px 0;
+}
+.soreder-btn-item .button-block {
+    margin-top: 0;
+}
+.orderbtn{
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+    border:1px #ddd solid;
+    display: inline-block;
+    overflow: hidden;
+    height: 34px;
+    margin-top: 5px;
+}
+.orderbtn .button-energizedv{
+    padding: 0 30px;
+    border:1px #ddd solid;
+
+}
+.orderbtn .button-light{
+    padding: 0 30px;
+
+}
+.orderbtn .button {
+    border:none;
+
+}
+.orderbtn .button-energizedv.active{
+    background: #ff9800;
+    color: #ffffff;
+    border-radius:20px 0 0 20px;
+}
+
+.orderbtn .button-light.active{
+    -webkit-border-radius:0 20px 20px 0;
+    -moz-border-radius:0 20px 20px 0;
+    border-radius:0 20px 20px 0;
+    background: #ff9800;
+    color: #ffffff;
+}
+/*.bar .button, .bar button {*/
+    /*padding: 0 30px;*/
+/*}*/
+.my-order>.tabs {
+    background-position: top;
+    border-bottom: solid #ddd 1px;
+}
+
+.soreder-couponinfo{
+    width: 100%;
+    padding-bottom: 10px;
+}
+.soreder-priceinfo{
+    width: 100%;
+    padding-top: 10px;
+    border-top:solid #f0f0f0 1px;
+}
+
+.servicebg-box{
+    height: 100%;
+    margin: 10px;
+    background: #ffffff;
+    -moz-box-shadow:#cccccc 0 0 10px;/*firefox*/
+    -webkit-box-shadow:#cccccc 0 0 10px;/*webkit*/
+    box-shadow:#cccccc 0 0 10px;/*opera或ie9*/
+}
+.service-cont{
+    line-height: 30px;
+}
+
+.contyl-ge{
+    width: 60% !important;
+    text-align: right;
+}
+
+
+

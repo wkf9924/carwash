@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CodeVC-->
+        <scene sceneID="wkb-qs-xIF">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zgt-Tw-Ffs" customClass="QRCodeVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R6d-cq-FDc"/>
+                        <viewControllerLayoutGuide type="bottom" id="xnl-Ed-9y2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U7w-ke-lRy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxf-K3-Iqf">
+                                <rect key="frame" x="17" y="37" width="341" height="613"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qiq-JR-Xvx">
+                                        <rect key="frame" x="3" y="3" width="335" height="607"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请将此二维码出示给商家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iN-Mf-Pco">
+                                                <rect key="frame" x="72" y="35" width="191" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="28u-r8-NMS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="二维码" translatesAutoresizingMaskIntoConstraints="NO" id="8Ou-gP-YQ1">
+                                                <rect key="frame" x="80" y="90" width="175" height="175"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="8Ou-gP-YQ1" secondAttribute="height" id="2JP-Rg-tt8"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Y-kg-SzI">
+                                                <rect key="frame" x="20" y="329" width="315" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="FAq-H9-5Kl"/>
+                                                </constraints>
+                                                <string key="text">1) 到店后向商户出示上方二维码验证
+2) 5座及以下非营运小型轿车可享受标准洗车服务一次
+3) SUV、MPV等车型需向商家另外支付5元
+4) 本券仅对洗洋洋服务订单有效, 不可抵用其他服务
+注：本券仅限本人当场打开使用</string>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用说明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RC0-Ze-zFU">
+                                                <rect key="frame" x="20" y="305" width="53.5" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="8Ou-gP-YQ1" firstAttribute="leading" secondItem="qiq-JR-Xvx" secondAttribute="leading" constant="80" id="0vq-zC-PsK"/>
+                                            <constraint firstItem="RC0-Ze-zFU" firstAttribute="leading" secondItem="qiq-JR-Xvx" secondAttribute="leading" constant="20" id="3cO-8N-B0o"/>
+                                            <constraint firstItem="Z5Y-kg-SzI" firstAttribute="top" secondItem="RC0-Ze-zFU" secondAttribute="bottom" constant="8" id="BuU-Od-Abv"/>
+                                            <constraint firstItem="9iN-Mf-Pco" firstAttribute="centerX" secondItem="qiq-JR-Xvx" secondAttribute="centerX" id="Hhm-yR-Wvz"/>
+                                            <constraint firstItem="9iN-Mf-Pco" firstAttribute="top" secondItem="qiq-JR-Xvx" secondAttribute="top" constant="35" id="Y4g-Pc-Kg8"/>
+                                            <constraint firstItem="Z5Y-kg-SzI" firstAttribute="leading" secondItem="qiq-JR-Xvx" secondAttribute="leading" constant="20" id="bzb-JZ-1pL"/>
+                                            <constraint firstItem="8Ou-gP-YQ1" firstAttribute="top" secondItem="9iN-Mf-Pco" secondAttribute="bottom" constant="34" id="dEF-Rk-Sh9"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Ou-gP-YQ1" secondAttribute="trailing" constant="80" id="jKa-yA-PGW"/>
+                                            <constraint firstItem="RC0-Ze-zFU" firstAttribute="top" secondItem="8Ou-gP-YQ1" secondAttribute="bottom" constant="40" id="lrm-me-0XL"/>
+                                            <constraint firstAttribute="trailing" secondItem="Z5Y-kg-SzI" secondAttribute="trailing" id="tNr-Dg-fiM"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskYoBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88617795705795288" green="0.88633018732070923" blue="0.88616830110549927" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="qiq-JR-Xvx" secondAttribute="bottom" constant="3" id="8lW-Tl-eeM"/>
+                                    <constraint firstItem="qiq-JR-Xvx" firstAttribute="top" secondItem="qxf-K3-Iqf" secondAttribute="top" constant="3" id="ULb-aN-HwO"/>
+                                    <constraint firstItem="qiq-JR-Xvx" firstAttribute="leading" secondItem="qxf-K3-Iqf" secondAttribute="leading" constant="3" id="V22-gq-RcW"/>
+                                    <constraint firstAttribute="trailing" secondItem="qiq-JR-Xvx" secondAttribute="trailing" constant="3" id="ggD-S8-wYQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94891661405563354" green="0.94907897710800171" blue="0.94890636205673218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xnl-Ed-9y2" firstAttribute="top" secondItem="qxf-K3-Iqf" secondAttribute="bottom" constant="17" id="U2j-T1-mmG"/>
+                            <constraint firstItem="qxf-K3-Iqf" firstAttribute="top" secondItem="R6d-cq-FDc" secondAttribute="bottom" constant="17" id="i5E-1E-WMK"/>
+                            <constraint firstItem="qxf-K3-Iqf" firstAttribute="leading" secondItem="U7w-ke-lRy" secondAttribute="leading" constant="17" id="lEy-Qu-CVj"/>
+                            <constraint firstAttribute="trailing" secondItem="qxf-K3-Iqf" secondAttribute="trailing" constant="17" id="nH2-r4-pxO"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="DirectionForUseTextView" destination="Z5Y-kg-SzI" id="q8Q-so-0si"/>
+                        <outlet property="QRCodeImage" destination="8Ou-gP-YQ1" id="e82-og-yPd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hrg-6R-emh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1039" y="118"/>
+        </scene>
+        <!--CodeVC-->
+        <scene sceneID="Wpy-JE-IZj">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeVIPVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4rR-0A-qqW" customClass="QRCodeVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LGE-hr-SNC"/>
+                        <viewControllerLayoutGuide type="bottom" id="8YO-Rb-aaG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zxm-sM-a5x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNK-Di-row">
+                                <rect key="frame" x="17" y="37" width="341" height="613"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBf-9C-VI5">
+                                        <rect key="frame" x="3" y="3" width="335" height="607"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="此二维码供会员洗车时使用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmg-rU-uA7">
+                                                <rect key="frame" x="63.5" y="35" width="208" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="8M2-jm-PsR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="二维码" translatesAutoresizingMaskIntoConstraints="NO" id="7NF-a7-5Gu">
+                                                <rect key="frame" x="80" y="90" width="175" height="175"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="7NF-a7-5Gu" secondAttribute="height" id="VZS-p4-Rtw"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="洗车前请将此二维码出示给商家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acy-dJ-tHd">
+                                                <rect key="frame" x="54" y="305" width="228.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="7NF-a7-5Gu" firstAttribute="top" secondItem="Fmg-rU-uA7" secondAttribute="bottom" constant="34" id="3oj-8u-WzO"/>
+                                            <constraint firstItem="acy-dJ-tHd" firstAttribute="centerX" secondItem="gBf-9C-VI5" secondAttribute="centerX" id="Fht-5G-gpv"/>
+                                            <constraint firstItem="7NF-a7-5Gu" firstAttribute="leading" secondItem="gBf-9C-VI5" secondAttribute="leading" constant="80" id="TGi-kY-qTj"/>
+                                            <constraint firstItem="Fmg-rU-uA7" firstAttribute="centerX" secondItem="gBf-9C-VI5" secondAttribute="centerX" id="VjP-Db-8p6"/>
+                                            <constraint firstAttribute="trailing" secondItem="7NF-a7-5Gu" secondAttribute="trailing" constant="80" id="XpO-Ge-Mzc"/>
+                                            <constraint firstItem="acy-dJ-tHd" firstAttribute="top" secondItem="7NF-a7-5Gu" secondAttribute="bottom" constant="40" id="Yvi-yZ-Liy"/>
+                                            <constraint firstItem="Fmg-rU-uA7" firstAttribute="top" secondItem="gBf-9C-VI5" secondAttribute="top" constant="35" id="jh2-ef-wCs"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskYoBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88617795710000002" green="0.88633018730000002" blue="0.8861683011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="gBf-9C-VI5" firstAttribute="top" secondItem="MNK-Di-row" secondAttribute="top" constant="3" id="3ON-a7-tqX"/>
+                                    <constraint firstItem="gBf-9C-VI5" firstAttribute="leading" secondItem="MNK-Di-row" secondAttribute="leading" constant="3" id="KTR-6i-ckM"/>
+                                    <constraint firstAttribute="trailing" secondItem="gBf-9C-VI5" secondAttribute="trailing" constant="3" id="icE-nX-Zbf"/>
+                                    <constraint firstItem="gBf-9C-VI5" firstAttribute="centerX" secondItem="MNK-Di-row" secondAttribute="centerX" id="qHe-cI-9ox"/>
+                                    <constraint firstAttribute="bottom" secondItem="gBf-9C-VI5" secondAttribute="bottom" constant="3" id="u0H-ba-R96"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MNK-Di-row" secondAttribute="trailing" constant="17" id="65y-RF-Q4V"/>
+                            <constraint firstItem="MNK-Di-row" firstAttribute="top" secondItem="LGE-hr-SNC" secondAttribute="bottom" constant="17" id="9kC-do-78O"/>
+                            <constraint firstItem="MNK-Di-row" firstAttribute="leading" secondItem="zxm-sM-a5x" secondAttribute="leading" constant="17" id="hrd-pM-4fD"/>
+                            <constraint firstItem="8YO-Rb-aaG" firstAttribute="top" secondItem="MNK-Di-row" secondAttribute="bottom" constant="17" id="zsW-DA-XCt"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="QRCodeImage" destination="7NF-a7-5Gu" id="kbK-IR-QVA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJh-Pw-RgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-356" y="116.49175412293854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="二维码" width="238" height="240"/>
+    </resources>
+</document>

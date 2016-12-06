@@ -1,0 +1,99 @@
+.address-img {
+padding-top: 50px;
+  text-align:center;
+}
+.address-img img{
+  width:30%;
+}
+.address-img div{
+  margin-top:20px;
+  font-size:16px;
+
+}
+.address-btn{
+  position: absolute;
+  top:28px;
+  right:0px;
+  min-width: auto;
+  min-height: auto;
+  line-height: auto;
+}
+.adddress-area{
+  height:34px;
+  padding-top:2px;
+  padding-top: 1px;
+  line-height:31px;
+}
+.address-no{
+	margin-top: 50px;
+  	text-align:center;
+      
+}
+.address-no img{
+	width:30%;
+}
+.address-no p{
+	margin-top: 30px;
+}
+ion-spinner.address-my{
+  position:absolute;
+  top:200px;
+  left:50%;
+  transform: translate(-50%)
+}
+.area-wrap{
+  	top:42px;
+  	padding-left:16px;
+
+}
+.address-add.list{
+
+}
+.address-add.list .area+.area{
+	padding-left: 15px;
+}
+.address-add.list .area.active{
+	color:red;
+}
+.tab-content.address-add{
+
+}
+.tab-content.address-add .tab .province{
+
+}
+.tab-content.address-add .tab .province.active{
+	color:red;
+}
+.tab-content.address-add .tab .city.active{
+	color:red;
+}
+.tab-content.address-add .tab .district.active{
+	color:red;
+}
+/*添加or 修改收货地址表单 */
+.addressForm{
+	position:relative;
+}
+
+.addressForm label.item{
+  	padding-left: 0px;
+     	position:relative;
+}
+.addressForm label.item input{
+	padding-left: 16px;
+}
+.addressForm label.item .input-label{
+	margin-left: 16px;
+}
+.addressForm label .address-area{
+	margin-left: 16px;
+}
+.addressForm label.item .error{
+	position:absolute;
+	color:red;
+	right:10px;
+	top:0px;
+	font-size:12px;
+	font-weight: bold;
+	
+}

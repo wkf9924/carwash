@@ -1,0 +1,21 @@
+<ion-view>
+	<ion-nav-title>选择省</ion-nav-title>
+	<ion-content class="content-bg">
+		<div class="list" select-province>
+  			<div class="item item-button-right"
+  				 ui-sref="select-city"
+				ng-repeat="item in provinceArr"
+				item-code="{{item.item_code}}"
+				province-repeat-finished
+  				 >
+    				<span class="province" >{{item.item_name}}</span>
+    				<button class="button button-clear button-stable">
+      				<i class="icon ion-ios-arrow-right"></i>
+    				</button>
+  			</div>
+		</div>
+		
+	
+		
+	</ion-content>
+</ion-view>

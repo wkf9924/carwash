@@ -1,0 +1,17 @@
+<div id="shareView" class="discovery-share-item">
+    <div class="discovery-share-box"  ng-click="hiddenShare()" >
+    </div>
+    <div class="bar bar-footer bar-light no-padding" id="bar-footer">
+        <h1 class="title">分享至</h1>
+        <div class="button-bar">
+            <button class="button button-large button-discovery-wx" style="border-radius: 0">微信</button>
+            <button class="button button-large button-discovery-wb" style="border-radius: 0">微博</button>
+            <button class="button button-large button-discovery-pyq" style="border-radius: 0">朋友圈</button>
+            <button class="button button-large button-discovery-dx" style="border-radius: 0">短信</button>
+        </div>
+
+    </div>
+</div>
+
+
+
