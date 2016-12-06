@@ -118,7 +118,29 @@
     MyBankCardDetailViewController *myBankCardDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"MyBankCardDetailVC"];
     myBankCardDetailVC.cardNumber = self.dataArray[row][@"cardNo"];
     [self.navigationController pushViewController:myBankCardDetailVC animated:YES];
+    
+    [self addaddressAction:self.dataArray[row][@"cardNo"]];
 }
+
+
+- (void)addaddressAction:(NSString *)card{
+    UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *action_1 = [UIAlertAction actionWithTitle:@"解除绑定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        PasswordViewController *pass = [[PasswordViewController alloc] init];
+        pass.interface = @"解绑";
+        pass.cardNum  = card;
+        [self.navigationController pushViewController:pass animated:YES];
+        
+    }];
+    [action_1 setValue:[UIColor redColor] forKey:@"titleTextColor"];
+    UIAlertAction *action_2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alertcontroller addAction:action_1];
+    [alertcontroller addAction:action_2];
+    [self presentViewController:alertcontroller animated:YES completion:nil];
+}
+
 
 - (NSMutableArray *)dataArray {
     if (!_dataArray) {
