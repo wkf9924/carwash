@@ -112,13 +112,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSInteger row //    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"BankCard" bundle:nil];
-//    MyBankCardDetailViewController *myBankCardDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"MyBankCardDetailVC"];
-//    myBankCardDetailVC.cardNumber = self.dataArray[row][@"cardNo"];
-//    [self.navigationController pushViewController:myBankCardDetailVC animated:YES];
-= indexPath.row;
-    
+    NSInteger row = indexPath.row;
     [self addaddressAction:self.dataArray[row][@"cardNo"]];
 }
 
