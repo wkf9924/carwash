@@ -65,9 +65,7 @@ typedef enum : NSUInteger {
             }else{
                 [model setValuesForKeysWithDictionary:dic];
                 [self.datasource addObject:model];
-            }
-        
-            
+            } 
         }
         NSLog(@"数组中的元素个数::%ld    %ld",self.datasource_2.count,self.datasource.count);
         [self.tableView reloadData];
