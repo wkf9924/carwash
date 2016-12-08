@@ -100,7 +100,7 @@
             [self.collectButton setImage:[UIImage imageNamed:@"收藏icon"] forState:UIControlStateNormal];
             NSLog(@"已经取消收藏");
         }else if ([collectString isEqualToString:@"2"]){
-             LCSUCCESS_ALSERT(@"收藏成功")
+            LCSUCCESS_ALSERT(@"收藏成功")
             [self.collectButton setImage:[UIImage imageNamed:@"已收藏icon"] forState:UIControlStateNormal];
             NSLog(@"已经收藏");
         }
@@ -165,8 +165,8 @@
     if (self.webViewHeight == webViewHeight) {
         return;
     }
-        self.webViewHeight = webViewHeight;
-        [self.tableView reloadData];
+    self.webViewHeight = webViewHeight;
+    [self.tableView reloadData];
     
 }
 //发表评论按钮回调
@@ -229,7 +229,7 @@
         if (self.articModel) {
             [cell setDataWithModel:self.articModel];
         }
-        return cell; 
+        return cell;
     }else if (indexPath.row == 1){
         FindDetailWebCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FindDetailWebCell" forIndexPath:indexPath];
         if (self.articModel) {
@@ -276,7 +276,7 @@
     if ([likeString isEqualToString:@"1"]) {//未点赞
         COM.isLike = @"2";
         [[CWFindManager shareManager] sendLikeStatus:self.articModel.ID isLike:YES];
-//        NSLog(@"喜欢人数::%@",cell.like_count.text);
+        //        NSLog(@"喜欢人数::%@",cell.like_count.text);
         
         
     }else if ([likeString isEqualToString:@"2"]){//已点赞
@@ -304,13 +304,13 @@
     return _datacource;
 }
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

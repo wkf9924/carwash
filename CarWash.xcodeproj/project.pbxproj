@@ -191,6 +191,7 @@
 		16454FEC1D3F72CF00BEE32B /* QRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 16454FEB1D3F72CF00BEE32B /* QRCodeVC.m */; };
 		16454FEE1D3F72EA00BEE32B /* QRCodeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16454FED1D3F72EA00BEE32B /* QRCodeVC.storyboard */; };
 		1647399D1D9D166300A3A985 /* OrderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1647399C1D9D166300A3A985 /* OrderViewController.storyboard */; };
+		1649EF7E1DF94042001D4715 /* FindDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1649EF7D1DF94042001D4715 /* FindDetailVC.m */; };
 		164D282A1D9B5757000E00E2 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 164D28291D9B5757000E00E2 /* LoginModel.m */; };
 		165581EA1D4C411700E8F96F /* NSArray+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 165581E51D4C411700E8F96F /* NSArray+HYBUnicodeReadable.m */; };
 		165581EB1D4C411700E8F96F /* NSDictionary+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 165581E71D4C411700E8F96F /* NSDictionary+HYBUnicodeReadable.m */; };
@@ -401,7 +402,6 @@
 		17F5113E1D9DF3EB0040FFEB /* FindDetailWebCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F5113D1D9DF3EB0040FFEB /* FindDetailWebCell.m */; };
 		17F511411D9DF42F0040FFEB /* FindDetailButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F511401D9DF42F0040FFEB /* FindDetailButtonCell.m */; };
 		17F511441D9DF4460040FFEB /* FindDetailCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F511431D9DF4460040FFEB /* FindDetailCommentCell.m */; };
-		17F511471D9DF6EB0040FFEB /* FindDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F511461D9DF6EB0040FFEB /* FindDetailVC.m */; };
 		17F5114A1D9E13500040FFEB /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F511491D9E13500040FFEB /* CommentModel.m */; };
 		17F5114D1D9E138C0040FFEB /* ArticleDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F5114C1D9E138C0040FFEB /* ArticleDetailModel.m */; };
 		17F511511D9E23E70040FFEB /* CWComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F511501D9E23E70040FFEB /* CWComment.m */; };
@@ -785,6 +785,8 @@
 		16454FEB1D3F72CF00BEE32B /* QRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeVC.m; sourceTree = "<group>"; };
 		16454FED1D3F72EA00BEE32B /* QRCodeVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCodeVC.storyboard; sourceTree = "<group>"; };
 		1647399C1D9D166300A3A985 /* OrderViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OrderViewController.storyboard; sourceTree = "<group>"; };
+		1649EF7C1DF94042001D4715 /* FindDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindDetailVC.h; sourceTree = "<group>"; };
+		1649EF7D1DF94042001D4715 /* FindDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindDetailVC.m; sourceTree = "<group>"; };
 		164D28281D9B5757000E00E2 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		164D28291D9B5757000E00E2 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		165581E41D4C411700E8F96F /* NSArray+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
@@ -1171,8 +1173,6 @@
 		17F511401D9DF42F0040FFEB /* FindDetailButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindDetailButtonCell.m; sourceTree = "<group>"; };
 		17F511421D9DF4460040FFEB /* FindDetailCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindDetailCommentCell.h; sourceTree = "<group>"; };
 		17F511431D9DF4460040FFEB /* FindDetailCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindDetailCommentCell.m; sourceTree = "<group>"; };
-		17F511451D9DF6EB0040FFEB /* FindDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindDetailVC.h; sourceTree = "<group>"; };
-		17F511461D9DF6EB0040FFEB /* FindDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindDetailVC.m; sourceTree = "<group>"; wrapsLines = 0; };
 		17F511481D9E13500040FFEB /* CommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
 		17F511491D9E13500040FFEB /* CommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
 		17F5114B1D9E138C0040FFEB /* ArticleDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailModel.h; sourceTree = "<group>"; };
@@ -3062,8 +3062,8 @@
 			children = (
 				0EDB61B31D9613B900ED7F2F /* CWFindTableViewController.h */,
 				0EDB61B41D9613B900ED7F2F /* CWFindTableViewController.m */,
-				17F511451D9DF6EB0040FFEB /* FindDetailVC.h */,
-				17F511461D9DF6EB0040FFEB /* FindDetailVC.m */,
+				1649EF7C1DF94042001D4715 /* FindDetailVC.h */,
+				1649EF7D1DF94042001D4715 /* FindDetailVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -4028,7 +4028,6 @@
 				1682E9E21D2B969500A3A327 /* IQUIScrollView+Additions.m in Sources */,
 				1664BBF31DE2FE7A00B38F6B /* VIPSellerCell.m in Sources */,
 				16B6AB101D3DDBF1003AA719 /* AddressCell.m in Sources */,
-				17F511471D9DF6EB0040FFEB /* FindDetailVC.m in Sources */,
 				1757193B1DAB9FEC00E7A84B /* BindedBankCardModel.m in Sources */,
 				17AA2BFD1DB0BCE300E04853 /* MyLoveCarVC.m in Sources */,
 				0E2DEB681D27504D00999797 /* UIButton+AFNetworking.m in Sources */,
@@ -4103,6 +4102,7 @@
 				172DEA991DC7336300181EEB /* BindBankCardUserDelegateVC.m in Sources */,
 				0E183B4D1D33D78000DBBCC1 /* CDVJpegHeaderWriter.m in Sources */,
 				0E2DEB4B1D27504D00999797 /* BZSettingGroup.m in Sources */,
+				1649EF7E1DF94042001D4715 /* FindDetailVC.m in Sources */,
 				0E2DEBAB1D27504D00999797 /* SDWebImageCompat.m in Sources */,
 				173B41271DB752980063BB1F /* SelectCouponVC.m in Sources */,
 				165FBD551DE2EC6B00AD8F28 /* WashServiceVIPCell.m in Sources */,
