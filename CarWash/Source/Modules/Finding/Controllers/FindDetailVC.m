@@ -171,6 +171,14 @@
 }
 //发表评论按钮回调
 - (IBAction)commentButtonAction:(UIButton *)sender {
+    
+    NSString *token = [COM getLoginToken];
+    if (token.length < 1 || token == nil || [token isKindOfClass:[NSNull class]] || [token isEqualToString:@""]) {
+        [UIStoryboard storyboardWithName:@"LoginRegister" bundle:nil];
+        [self presentViewController:[[UIStoryboard storyboardWithName:@"LoginRegister" bundle:nil] instantiateViewControllerWithIdentifier:@"login"] animated:YES completion:nil];
+        return;
+    }
+    
     if (self.commentText.text.length == 0) {
         LCFAIL_ALERT(@"说点什么吧🙂");
     }else{

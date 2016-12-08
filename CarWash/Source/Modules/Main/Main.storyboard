@@ -186,7 +186,7 @@
                     <tabBarItem key="tabBarItem" title="发现" image="发现icon(常态)" selectedImage="发现icon(选中)" id="vSe-Ia-Eae">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JkD-PJ-Xna">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JkD-PJ-Xna">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
