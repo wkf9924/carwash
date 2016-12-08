@@ -258,35 +258,48 @@
 - (void)sendButtonAction:(UIButton *)sender{
     self.collectButton = sender;
     NSString *collectString = COM.isCollect;
+    
+    if ([[COM getLoginToken] isEqualToString:@""] || [[COM getLoginToken] isKindOfClass:[NSNull class]] || [COM getLoginToken].length < 1) {
+        
+        [UIStoryboard storyboardWithName:@"LoginRegister" bundle:nil];
+        [self presentViewController:[[UIStoryboard storyboardWithName:@"LoginRegister" bundle:nil] instantiateViewControllerWithIdentifier:@"login"] animated:YES completion:nil];
+        COM.isCollect = @"1";
+        return;
+    }
+    
     if ([collectString isEqualToString:@"1"]) {
         COM.isCollect = @"2";
         [[CWFindManager shareManager] sendCollectStatus:self.articModel.ID isCollect:YES];//收藏
     }else if ([collectString isEqualToString:@"2"]){
         COM.isCollect = @"1";
         [[CWFindManager shareManager] sendCollectStatus:self.articModel.ID isCollect:NO];//取消收藏
-    }else{
-        [UIStoryboard storyboardWithName:@"LoginRegister" bundle:nil];
-        [self presentViewController:[[UIStoryboard storyboardWithName:@"LoginRegister" bundle:nil] instantiateViewControllerWithIdentifier:@"login"] animated:YES completion:nil];
     }
 }
 //indexPath.row == 2  cell上点赞按钮的代理回调
 - (void)sendLikeButtonAction:(UIButton *)sender{
     self.likeButton = sender;
     NSString *likeString = COM.isLike;
+    
+    if ([[COM getLoginToken] isEqualToString:@""] || [[COM getLoginToken] isKindOfClass:[NSNull class]] || [COM getLoginToken].length < 1) {
+        
+        [UIStoryboard storyboardWithName:@"LoginRegister" bundle:nil];
+        [self presentViewController:[[UIStoryboard storyboardWithName:@"LoginRegister" bundle:nil] instantiateViewControllerWithIdentifier:@"login"] animated:YES completion:nil];
+        COM.isLike = @"1";
+        return;
+    }
+    
+
+    
     if ([likeString isEqualToString:@"1"]) {//未点赞
         COM.isLike = @"2";
         [[CWFindManager shareManager] sendLikeStatus:self.articModel.ID isLike:YES];
-        //        NSLog(@"喜欢人数::%@",cell.like_count.text);
-        
         
     }else if ([likeString isEqualToString:@"2"]){//已点赞
         COM.isLike = @"1";
         [[CWFindManager shareManager] sendLikeStatus:self.articModel.ID isLike:NO];
-    }else{//未登录
-        [UIStoryboard storyboardWithName:@"LoginRegister" bundle:nil];
-        [self presentViewController:[[UIStoryboard storyboardWithName:@"LoginRegister" bundle:nil] instantiateViewControllerWithIdentifier:@"login"] animated:YES completion:nil];
     }
 }
+
 - (void)sendLikeCountText:(NSString *)sender{
     self.likeCount = [sender substringFromIndex:2];
 }
