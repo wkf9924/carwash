@@ -873,7 +873,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "274"
             endingLineNumber = "274"
-            landmarkName = "-sendLikeButtonAction:"
+            landmarkName = "-sendButtonAction:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
