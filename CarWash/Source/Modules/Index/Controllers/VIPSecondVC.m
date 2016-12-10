@@ -56,7 +56,6 @@
     }
     if ([lastdateServer isEqualToDate:[lastdateVip laterDate:lastdateServer]]) {
         //ZHPickdate表示临时选择的时间，与系统当前时间比较。此处比较结果为ZHPickdate大于系统当前时间
-        
          LCSUCCESS_ALSERT(@"会员到期");
     }
 }
